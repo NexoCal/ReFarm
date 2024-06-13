@@ -8,7 +8,7 @@ WIP
 - git push : update repository
 
 
-### Team
+### Team RE:Farm
 
 - Muhammad Agus Virgianto
 - Rafi Fauzan 
