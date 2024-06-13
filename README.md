@@ -11,3 +11,7 @@ WIP
 ### Team
 
 - Muhammad Agus Virgianto
+- Rafi Fauzan 
+- Yoga Aditya Ariyanto 
+- Ramadhani Akbar Sulaksana
+- Muhammad Adrian Rizky Wijaya
