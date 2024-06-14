@@ -72,7 +72,7 @@
             <div class="intro-text">
                 <h2>Deskripsi Tanaman</h2>
                 <div class="plant-image">
-                    <img src="images/plant.jpg" alt="Plant Image" />
+                    <img src="images/Padi.png" alt="Plant Image" />
                 </div>
                 <div class="plant-description">
                     <p>Nama: Padi</p>
@@ -170,6 +170,8 @@
                 <input type="text" id="kelembapan-tanah" placeholder="Kelembapan Tanah" />
                 <input type="text" id="frekuensi" placeholder="Frekuensi" />
                 <input type="text" id="keterangan-kondisi" placeholder="Keterangan Kondisi" />
+                <input type="file" id="gambar-tanaman" accept="image/*" />
+                <img id="gambar-preview" style="display:none;" width="100" height="100" />
             </div>
             <div class="buttons">
                 <button class="btn-add" id="btn-add">Tambah</button>

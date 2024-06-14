@@ -18,6 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
         btnCancel.style.display = "none";
     });
 
+    const gambarTanamanInput = document.getElementById("gambar-tanaman");
+    const gambarPreview = document.getElementById("gambar-preview");
+
+    gambarTanamanInput.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                gambarPreview.src = e.target.result;
+                gambarPreview.style.display = "block";
+            };
+            reader.readAsDataURL(file);
+        } else {
+            gambarPreview.style.display = "none";
+        }
+    });
+
     btnSave.addEventListener("click", function () {
         const namaTanaman = document.getElementById("nama-tanaman").value;
         const tanggal = document.getElementById("tanggal").value;
@@ -27,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const kelembapanTanah = document.getElementById("kelembapan-tanah").value;
         const frekuensi = document.getElementById("frekuensi").value;
         const keteranganKondisi = document.getElementById("keterangan-kondisi").value;
+        const gambarSrc = gambarPreview.src;
 
         if (
             namaTanaman &&
@@ -36,10 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
             kondisiBatang &&
             kelembapanTanah &&
             frekuensi &&
-            keteranganKondisi
+            keteranganKondisi &&
+            gambarSrc
         ) {
             const newRow = `
                 <tr>
+                    <td><img src="${gambarSrc}" width="50" height="50" /></td>
                     <td>${namaTanaman}</td>
                     <td>${tanggal}</td>
                     <td>${tinggiTanaman}</td>
@@ -60,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("kelembapan-tanah").value = "";
             document.getElementById("frekuensi").value = "";
             document.getElementById("keterangan-kondisi").value = "";
+            gambarTanamanInput.value = "";
+            gambarPreview.src = "";
+            gambarPreview.style.display = "none";
 
             formContainer.style.display = "none";
             btnAdd.style.display = "block";
