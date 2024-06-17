@@ -51,8 +51,8 @@
         <div class="user-profile">
             <img src="images/user.jpg" alt="User Profile" />
             <div class="user-detail">
-                <h3>Jacob</h3>
-                <span>Logout</span>
+                <h3>Zrch</h3>
+                <h5 herf="logout.html">Logout</h5>
             </div>
         </div>
     </div>

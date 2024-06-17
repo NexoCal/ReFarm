@@ -1,4 +1,3 @@
-/* Importing Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
@@ -10,7 +9,9 @@
 
 body {
   min-height: 100vh;
-  background: #F0F4FF;
+  background: #f0f4ff;
+  display: flex;
+  transition: margin-left 0.4s ease;
 }
 
 .sidebar {
@@ -20,11 +21,10 @@ body {
   height: 100%;
   width: 85px;
   display: flex;
-  overflow-x: hidden;
   flex-direction: column;
-  background: #4B6252;
+  background: #4b6252;
   padding: 25px 20px;
-  transition: all 0.4s ease;
+  transition: width 0.4s ease;
 }
 
 .sidebar:hover {
@@ -46,6 +46,12 @@ body {
   font-weight: 600;
   white-space: nowrap;
   margin-left: 23px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.sidebar:hover .sidebar-header h2 {
+  opacity: 1;
 }
 
 .sidebar-links h4 {
@@ -148,4 +154,80 @@ body {
 .sidebar:hover .user-account {
   background: #fff;
   border-radius: 4px;
+}
+
+.main-content {
+  margin-left: 80px; /* Sesuaikan margin saat sidebar tertutup */
+  padding: 20px;
+  width: calc(100% - 80px);
+  transition: margin-left 0.3s, width 0.3s;
+}
+
+.sidebar:hover ~ .main-content {
+  margin-left: 260px; /* Sesuaikan margin saat sidebar terbuka */
+  width: calc(100% - 260px);
+}
+
+.sidebar:hover .user-account {
+  background: #fff;
+  border-radius: 4px;
+}
+
+.diskusi-header {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.diskusi-header input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.diskusi-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.diskusi-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.diskusi-item:last-child {
+  border-bottom: none;
+}
+
+.diskusi-item p {
+  margin: 5px 0;
+}
+
+.diskusi-meta {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  color: #999;
+}
+
+.tags {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.tags h3 {
+  margin-bottom: 10px;
+}
+
+.tags ul {
+  list-style: none;
+}
+
+.tags ul li {
+  margin-bottom: 5px;
 }

@@ -134,11 +134,38 @@ body {
     align-items: center;
 }
 
-.user-info {
+.user-account {
+    margin-top: auto;
+    padding: 12px 10px;
+    margin-left: -10px;
+  }
+  
+  .user-profile {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
+    color: #161a2d;
+  }
+  
+  .user-profile img {
+      width: 42px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+  
+  .user-profile h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .user-profile span {
+    font-size: 0.775rem;
+    font-weight: 600;
+  }
+  
+  .user-detail {
+    margin-left: 23px;
+    white-space: nowrap;
+  }
 
 .content-section {
     display: flex;
@@ -215,7 +242,7 @@ body {
 }
 
 .plant-image img {
-    width: 100%;
+    width: 540px;
     height: auto;
 }
 
@@ -267,10 +294,3 @@ body {
     color: white;
 }
 
-.form-container img {
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    padding: 5px;
-    background: #f9f9f9;
-    border-radius: 5px;
-}
