@@ -17,4 +17,4 @@ WIP
 - Muhammad Adrian Rizky Wijaya
 
 - 
-apa ajajadsjdhsghfsgdhhdgh
+apa ajajadsjdhas
