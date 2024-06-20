@@ -16,4 +16,4 @@ WIP
 - Ramadhani Akbar Sulaksana
 - Muhammad Adrian Rizky Wijaya
 
-- 
+ini yoga profile kurang geser ke kanan ma warna hijau mumet
