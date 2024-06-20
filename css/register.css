@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  margin: 0;
+  font-family: poppins;
+  background-color: #4b6252;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #f2f1f1;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  text-align: center;
+}
+
+.logo img {
+  width: 150px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000;
+  align-self: flex-start;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+.alamat {
+  display: flex;
+  gap: 10px;
+}
+
+.tanggal-lahir {
+  display: flex;
+  gap: 5px;
+}
+
+button {
+  background-color: #4b6252;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-items: start;
+  align-self: flex-start;
+  width: 150px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #43523e;
+}
