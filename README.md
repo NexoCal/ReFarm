@@ -16,4 +16,4 @@ WIP
 - Ramadhani Akbar Sulaksana
 - Muhammad Adrian Rizky Wijaya
 
-- Semangat Ges
+- 
