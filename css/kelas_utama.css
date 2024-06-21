@@ -1,0 +1,241 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #F0F4FF;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 25px 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar .sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .sidebar-header .logo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.sidebar-links {
+    list-style: none;
+}
+
+.sidebar-links li {
+    margin-bottom: 10px;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    color: #4B6252;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.sidebar-links li a span.material-symbols-outlined {
+    margin-right: 10px;
+}
+
+.sidebar-links li a:hover,
+.sidebar-links li a.active {
+    background: #F0F4FF;
+    color: #000;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 25px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-bar span.material-symbols-outlined {
+    font-size: 20px;
+    color: #4B6252;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info span.material-symbols-outlined {
+    font-size: 24px;
+    color: #4B6252;
+}
+
+.user-info span {
+    font-weight: 600;
+    color: #4B6252;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-text .info-button {
+    background: #F0F4FF;
+    color: #4B6252;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.carousel-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .indicator.active {
+    background: #4B6252;
+}
+
+/* Recommendations Section */
+.recommendations {
+    margin-bottom: 40px;
+}
+
+.recommendations h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4B6252;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    display: block; /* Make the <a> element a block-level element */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4B6252;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add hover effect */
+}
+
+/* All Classes Section */
+.all-classes {
+    margin-bottom: 40px;
+}
+
+.all-classes h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4B6252;
+}
