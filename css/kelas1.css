@@ -1,0 +1,213 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #F0F4FF;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 25px 20px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .sidebar-header .logo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar-links {
+  list-style: none;
+}
+
+.sidebar-links li {
+  margin-bottom: 10px;
+}
+
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  color: #4B6252;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar-links li a span {
+  margin-right: 10px;
+}
+
+.sidebar-links li a:hover,
+.sidebar-links li a.active {
+  background: #e6f4ea;
+}
+
+.main-content {
+  margin-left: 220px; /* Sesuaikan margin dengan lebar sidebar */
+  padding: 20px;
+  width: calc(100% - 220px);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar .material-symbols-outlined {
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.class-details {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.class-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.class-image {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.class-info {
+  flex: 1;
+}
+
+.class-details h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.class-details p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.class-meta {
+  display: flex;
+  width: 400px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.class-meta .material-symbols-outlined {
+  margin-right: 5px;
+}
+
+.class-actions {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.class-actions button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.class-actions .btn-cart {
+  background: #4B6252;
+  color: #fff;
+}
+
+.class-actions .btn-favorite {
+  background: #e6f4ea;
+  color: #4B6252;
+}
+
+.class-actions button span {
+  margin-right: 5px;
+}
+
+.class-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.class-tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: #e6f4ea;
+  color: #4B6252;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.class-tabs button.active {
+  background: #4B6252;
+  color: #fff;
+}
+
+.class-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
