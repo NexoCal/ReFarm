@@ -32,7 +32,7 @@
             </a>
         </li>
         <li>
-            <a href="tanamanSaya.html" class="active">
+            <a href="tanamanSaya.php" class="active">
                 <span class="material-symbols-outlined">Psychiatry</span>Tanaman Saya
             </a>
         </li>
@@ -52,7 +52,7 @@
             <img src="images/user.jpg" alt="User Profile" />
             <div class="user-detail">
                 <h3>Zrch</h3>
-                <h5 herf="logout.html">Logout</h5>
+                <h5 href="logout.html">Logout</h5>
             </div>
         </div>
     </div>
@@ -98,78 +98,90 @@
             <table class="progress-table">
                 <thead>
                     <tr>
-                        <th>Nama Tanaman</th>
                         <th>Tanggal</th>
                         <th>Tinggi Tanaman</th>
                         <th>Kondisi Daun</th>
                         <th>Kondisi Batang</th>
                         <th>Kelembapan Tanah</th>
-                        <th>Frekuensi</th>
+                        <th>Frekuensi Siram</th>
                         <th>Keterangan Kondisi</th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
                     <tr>
-                        <td>Padi</td>
                         <td>21 Juni 2024</td>
                         <td>10 cm</td>
                         <td>Sehat</td>
                         <td>Sehat</td>
-                        <td>80%</td>
-                        <td>Harian</td>
+                        <td>Normal</td>
+                        <td>1</td>
                         <td>Normal</td>
                     </tr>
                     <tr>
-                        <td>Padi</td>
                         <td>22 Juni 2024</td>
                         <td>10.5 cm</td>
                         <td>Sehat</td>
                         <td>Sehat</td>
-                        <td>78%</td>
-                        <td>Harian</td>
+                        <td>Normal</td>
+                        <td>1</td>
                         <td>Normal</td>
                     </tr>
                     <tr>
-                        <td>Padi</td>
                         <td>23 Juni 2024</td>
                         <td>11 cm</td>
                         <td>Sehat</td>
                         <td>Sehat</td>
-                        <td>79%</td>
-                        <td>Harian</td>
+                        <td>Normal</td>
+                        <td>1</td>
                         <td>Normal</td>
                     </tr>
                     <tr>
-                        <td>Padi</td>
                         <td>24 Juni 2024</td>
                         <td>11.5 cm</td>
                         <td>Sehat</td>
                         <td>Sehat</td>
-                        <td>80%</td>
-                        <td>Harian</td>
+                        <td>Normal</td>
+                        <td>1</td>
                         <td>Normal</td>
                     </tr>
                     <tr>
-                        <td>Padi</td>
                         <td>25 Juni 2024</td>
                         <td>12 cm</td>
                         <td>Sehat</td>
                         <td>Sehat</td>
-                        <td>81%</td>
-                        <td>Harian</td>
+                        <td>Normal</td>
+                        <td>1</td>
                         <td>Normal</td>
                     </tr>
                 </tbody>
             </table>
             <div class="form-container" id="form-container" style="display: none;">
-                <input type="text" id="nama-tanaman" placeholder="Nama Tanaman" />
                 <input type="date" id="tanggal" />
                 <input type="text" id="tinggi-tanaman" placeholder="Tinggi Tanaman" />
-                <input type="text" id="kondisi-daun" placeholder="Kondisi Daun" />
-                <input type="text" id="kondisi-batang" placeholder="Kondisi Batang" />
-                <input type="text" id="kelembapan-tanah" placeholder="Kelembapan Tanah" />
-                <input type="text" id="frekuensi" placeholder="Frekuensi" />
-                <input type="text" id="keterangan-kondisi" placeholder="Keterangan Kondisi" />
+                <select id="kondisi-daun">
+                    <option value="" disabled selected>Pilih Kondisi Daun</option>
+                    <option value="Segar">Segar</option>
+                    <option value="Sedikit Layu">Sedikit Layu</option>
+                    <option value="Layu">Layu</option>
+                </select>
+                <select id="kondisi-batang">
+                    <option value="" disabled selected>Pilih Kondisi Batang</option>
+                    <option value="Segar">Segar</option>
+                    <option value="Sedikit Layu">Sedikit Layu</option>
+                    <option value="Layu">Layu</option>
+                </select>
+                <select id="kelembapan-tanah">
+                    <option value="" disabled selected>Pilih Kelembapan Tanah</option>
+                    <option value="Basah">Basah</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Kering">Kering</option>
+                </select>
+                <select id="frekuensi-siram">
+                    <option value="" disabled selected>Pilih Frekuensi</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3 dan lebih">3 dan lebih</option>
+                </select>
                 <input type="file" id="gambar-tanaman" accept="image/*" />
                 <img id="gambar-preview" style="display:none;" width="100" height="100" />
             </div>

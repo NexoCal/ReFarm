@@ -15,5 +15,3 @@ WIP
 - Yoga Aditya Ariyanto 
 - Ramadhani Akbar Sulaksana
 - Muhammad Adrian Rizky Wijaya
-
-- 
