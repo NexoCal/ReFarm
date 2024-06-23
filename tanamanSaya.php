@@ -84,7 +84,7 @@
         </a>
       </li>
       <li>
-        <a href="tanamanSaya.php" class="active">
+        <a href="tanamanSaya.php">
           <span class="material-symbols-outlined">Psychiatry</span>Tanaman Saya
         </a>
       </li>
@@ -134,9 +134,6 @@
               <p>Curah Hujan: Cukup Sering</p>
               <p>Musim: Hujan</p>
             </div>
-            <div class="chart">
-              
-            </div>
           </div>
           <div class="statistik-cards">
             <div class="card">
@@ -159,7 +156,7 @@
         </div>
       </div>  
       <div class="progress-chart">
-        <div id="curve_chart" style="width: 100%; height: 500px"></div>
+        <div id="curve_chart" style="width: 1000; height: 500px"></div>
       </div>
       <div class="daftar-tanaman">
         <h2>Daftar Tanaman Saya</h2>
@@ -169,7 +166,7 @@
               <div class="card-image">
                 <img src="images/pisang.jpg" alt="foto" width="250" height="250" border-radius="20">
               </div>
-              <div class="card-title">Pohon Pisang</div>
+              <div class="card-title"><h2>Pohon Pisang</h2></div>
             </a>
             <div class="card-info">
               <div class="card-info-item">
@@ -184,26 +181,11 @@
           </div>
           <div class="card">
             <div class="card-image">
-              <img src="images/pisang.jpg" href="tanaman.php" alt="foto" width="250" height="250">
-            </div>
-            <div class="card-title">Pohon Pisang</div>
-            <div class="card-info">
-              <div class="card-info-item">
-                <a href="tanaman.php" class="card-info-item">
-                  <span class="material-symbols-outlined">Sync</span>Pohon Pisang
-                  <span class="material-symbols-outlined">timelapse</span>
-                  2 Hari
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
               <img src="images/pisang.jpg" alt="foto" width="250" height="250">
             </div>
             <div class="card-title">
               <a href="tambahTanaman.php">
-                <h3>Tambah Tanaman</h3>
+                <h2>Tambah Tanaman</h2>
               </a>
             </div>
           </div>

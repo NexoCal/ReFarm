@@ -10,6 +10,57 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link rel="stylesheet" href="css/tanaman.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Tanggal', 'Pohon Pisang'],
+        ['1', 2],
+        ['2', 5],
+        ['3', 8],
+        ['4', 11],
+        ['5', 14],
+        ['6', 17],
+        ['7', 20],
+        ['8', 23],
+        ['9', 26],
+        ['10', 29],
+        ['11', 32],
+        ['12', 35],
+        ['13', 38],
+        ['14', 41],
+        ['15', 44],
+        ['16', 47],
+        ['17', 50],
+        ['18', 53],
+        ['19', 56],
+        ['20', 59],
+        ['21', 62],
+        ['22', 65],
+        ['23', 68],
+        ['24', 71],
+        ['25', 74],
+        ['26', 77],
+        ['27', 80],
+        ['28', 83],
+        ['29', 86],
+        ['30', 89]
+      ]);
+
+      var options = {
+        title: 'Perkembangan Tanaman Bulan Juni',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
 </head>
 <body>
 <aside class="sidebar">
@@ -59,12 +110,12 @@
 </aside>
 <div class="main-content">
     <div class="dashboard-header">
-        <h1>Tanaman Saya</h1>
+    <a href="tanamanSaya.php"><h1> <span class="material-symbols-outlined">Psychiatry</span>Tanaman Saya</h1></a>
         <div class="user-info">
             <span class="material-symbols-outlined">notifications</span>
             <span class="material-symbols-outlined">shopping_cart</span>
             <span class="material-symbols-outlined">account_circle</span>
-            <span>Jacob</span>
+            <span>Sulaiman</span>
         </div>
     </div>
     <div class="content-section">
@@ -83,6 +134,9 @@
                 </div>
             </div>
         </div>
+        <div class="chart">
+            <div id="curve_chart" style="width: 100%; height: 500px"></div>
+        </div>
         <div class="statistik-kamu">
             <h2>Statistik Perkembangan Tanaman</h2>
             <div class="statistik-content">
@@ -90,9 +144,6 @@
                     <p>Rata rata pertumbuhan: 0.5 cm / Hari</p>
                     <p>Kondisi Tanaman: Sehat</p>
                     <p>Musim: Hujan</p>
-                </div>
-                <div class="chart">
-                    <img src="images/chart.png" alt="Chart" />
                 </div>
             </div>
             <table class="progress-table">

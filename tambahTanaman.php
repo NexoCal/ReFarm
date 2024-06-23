@@ -101,5 +101,6 @@
         </form>
       </section>
     </main>
+    <script src="js/tambahTanaman.js"></script>
   </body>
 </html>
