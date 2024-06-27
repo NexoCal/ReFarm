@@ -277,12 +277,6 @@ body {
   color: #fff;
 }
 
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
 .profile-header {
   display: flex;
   flex-direction: column;
@@ -302,6 +296,12 @@ body {
 }
 .profile-header .btn:first-of-type {
   margin-right: 5px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .tab {
