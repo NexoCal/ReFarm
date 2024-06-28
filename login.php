@@ -14,7 +14,7 @@
                 <img src="./images/logo.png" alt="Re:Farm Logo">
             </div>
             <p class="intro-text">Ayo masuk ke akunmu dan mulai mencari tahu dunia pertanian</p>
-            <form>
+            <form action="php/login_controller.php" method="POST">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
 
@@ -22,9 +22,9 @@
                 <input type="password" id="password" name="password" required>
 
                 <div class="buttons">
-                    <a href="./dashboard.html"><button type="submit" class="login-button">Masuk</button></a>
+                    <a href="./dashboard.html"><button type="submit" class="login-button" name="login">Masuk</button></a>
                     <span>Belum punya akun?</span>
-                    <a href="./register.html"><button type="button" class="register-button">Daftar</button></a>
+                    <a href="./register.php"><button type="button" class="register-button">Daftar</button></a>
                 </div>
             </form>
         </div>
