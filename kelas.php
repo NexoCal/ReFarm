@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link rel="stylesheet" href="css\dashboard.css" />
+    <link rel="stylesheet" href="css\kelas.css" />
   </head>
   <body>
     <aside class="sidebar">
@@ -22,12 +22,12 @@
           <div class="menu-separator"></div>
         </h4>
         <li>
-          <a href="dashboard.html">
+          <a href="dashboard.php">
             <span class="material-symbols-outlined"> dashboard </span>Dashboard</a
           >
         </li>
         <li>
-          <a href="kelas.html"
+          <a href="kelas.php"
             ><span class="material-symbols-outlined"> book </span>Kelas</a
           >
         </li>
@@ -37,20 +37,15 @@
           >
         </li>
         <li>
-          <a href="diskusi.html"
+          <a href="diskusi.php"
             ><span class="material-symbols-outlined"> communication </span>Diskusi</a
-          >
-        </li>
-        <li>
-          <a href="logout.html"
-            ><span class="material-symbols-outlined"> logout </span>Logout</a
           >
         </li>
       </ul>
     </aside>
     <main class="main-content">
       <div class="dashboard-header">
-        <h1>Dashboard</h1>
+        <h1>Kelas</h1>
         <div class="user-info">
           <span class="material-symbols-outlined"> notifications </span>
           <span class="material-symbols-outlined"> shopping_cart </span>
@@ -60,7 +55,7 @@
       </div>
       <section class="intro-section">
         <div class="intro-text">
-          <p>Yuk kenali sekalian pelajari dunia pertanian</p>
+          <p>Yuk kenali dan pelajari dunia pertanian</p>
           <button>Info Selengkapnya</button>
         </div>
       </section>
