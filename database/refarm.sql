@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2024 at 11:48 AM
+-- Generation Time: Jun 29, 2024 at 10:49 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -78,7 +78,7 @@ CREATE TABLE `kelas` (
   `durasi` int(11) NOT NULL,
   `harga` int(11) NOT NULL,
   `deskripsi` varchar(999) NOT NULL,
-  `gambar` mediumblob DEFAULT NULL
+  `gambar` varchar(999) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -86,36 +86,36 @@ CREATE TABLE `kelas` (
 --
 
 INSERT INTO `kelas` (`id_kelas`, `id_kategori`, `nama_kelas`, `jumlah_modul`, `durasi`, `harga`, `deskripsi`, `gambar`) VALUES
-(1, 1, 'Budidaya Padi', 8, 15, 299000, 'Modul lengkap tentang budidaya padi mulai dari persiapan lahan hingga panen.', NULL),
-(2, 1, 'Teknik Menanam Jagung', 8, 14, 399000, 'Teknik lengkap menanam jagung dari pemilihan bibit hingga pasca panen.', NULL),
-(3, 1, 'Manajemen Lahan Padi', 6, 12, 299000, 'Strategi manajemen lahan untuk tanaman padi yang optimal.', NULL),
-(4, 1, 'Budidaya Gandum', 7, 16, 499000, 'Teknik budidaya gandum yang efisien dan efektif.', NULL),
-(5, 1, 'Optimalisasi Panen Padi', 5, 10, 399000, 'Cara-cara optimal untuk meningkatkan hasil panen padi.', NULL),
-(6, 2, 'Pertanian Organik Sayuran', 10, 20, 499000, 'Panduan lengkap menanam sayuran secara organik tanpa pestisida kimia.', NULL),
-(7, 2, 'Pupuk Organik dari Limbah', 5, 8, 299000, 'Cara membuat pupuk organik dari limbah pertanian dan rumah tangga.', NULL),
-(8, 2, 'Budidaya Sayuran Organik di Greenhouse', 6, 12, 399000, 'Teknik budidaya sayuran organik dalam greenhouse.', NULL),
-(9, 2, 'Teknologi Kompos Organik', 4, 6, 199000, 'Pembuatan dan penggunaan teknologi kompos organik.', NULL),
-(10, 2, 'Teknik Irigasi Organik', 7, 14, 499000, 'Metode irigasi yang sesuai untuk pertanian organik.', NULL),
-(11, 3, 'Teknologi Pengairan Modern', 7, 12, 399000, 'Pengenalan teknologi pengairan modern untuk meningkatkan efisiensi air.', NULL),
-(12, 3, 'Mesin Pemisah Gabah', 4, 6, 199000, 'Penggunaan mesin pemisah gabah untuk meningkatkan efisiensi produksi.', NULL),
-(13, 3, 'Teknologi Pemanenan Modern', 8, 16, 499000, 'Inovasi dalam teknologi pemanenan untuk meningkatkan produktivitas.', NULL),
-(14, 3, 'Alat Pertanian Otomatis', 5, 10, 299000, 'Penggunaan alat-alat pertanian otomatis untuk efisiensi kerja.', NULL),
-(15, 3, 'Sistem Hidroponik Canggih', 9, 18, 599000, 'Teknologi hidroponik untuk pertanian modern dan efisien.', NULL),
-(16, 4, 'Pengolahan Buah Tropis', 6, 10, 599000, 'Teknik pengolahan buah tropis menjadi produk yang bernilai jual tinggi.', NULL),
-(17, 4, 'Pengolahan Hasil Panen Kopi', 7, 22, 699000, 'Proses pengolahan biji kopi pasca panen menjadi produk siap jual.', NULL),
-(18, 4, 'Pengolahan Sayuran Pasca Panen', 8, 16, 499000, 'Teknik pengolahan sayuran pasca panen untuk nilai tambah.', NULL),
-(19, 4, 'Teknik Pengawetan Hasil Panen', 5, 10, 399000, 'Metode pengawetan hasil panen untuk memperpanjang umur simpan.', NULL),
-(20, 4, 'Pengolahan Biji Kakao', 9, 20, 799000, 'Teknik pengolahan biji kakao menjadi produk olahan berkualitas.', NULL),
-(21, 5, 'Manajemen Irigasi Sawah', 9, 18, 799000, 'Manajemen sistem irigasi untuk sawah agar menghasilkan panen optimal.', NULL),
-(22, 5, 'Optimalisasi Penggunaan Air', 6, 16, 499000, 'Cara mengoptimalkan penggunaan air dalam irigasi untuk hasil maksimal.', NULL),
-(23, 5, 'Teknik Irigasi Tetes', 8, 14, 399000, 'Metode irigasi tetes untuk efisiensi penggunaan air dan nutrisi.', NULL),
-(24, 5, 'Pengelolaan Irigasi Tersier', 5, 12, 299000, 'Manajemen irigasi tersier untuk distribusi air yang efektif.', NULL),
-(25, 5, 'Sistem Irigasi Berbasis Teknologi', 7, 20, 599000, 'Implementasi sistem irigasi berbasis teknologi modern.', NULL),
-(26, 6, 'Kewirausahaan Pertanian Dasar', 10, 25, 899000, 'Dasar-dasar kewirausahaan di bidang pertanian untuk pemula.', NULL),
-(27, 6, 'Pemasaran Produk Pertanian', 10, 30, 899000, 'Strategi pemasaran efektif untuk produk pertanian di pasar lokal dan global.', NULL),
-(28, 6, 'Manajemen Keuangan Pertanian', 6, 15, 499000, 'Teknik manajemen keuangan untuk usaha pertanian.', NULL),
-(29, 6, 'Studi Kelayakan Usaha Pertanian', 8, 20, 699000, 'Analisis kelayakan usaha di bidang pertanian.', NULL),
-(30, 6, 'Pengembangan Produk Pertanian Inovatif', 5, 18, 599000, 'Teknik inovasi dan pengembangan produk pertanian baru.', NULL);
+(1, 1, 'Budidaya Padi', 8, 15, 299000, 'Modul lengkap tentang budidaya padi mulai dari persiapan lahan hingga panen.', 'https://ketahananpangan.semarangkota.go.id/v3/content/images/Padi.jpg'),
+(2, 1, 'Teknik Menanam Jagung', 8, 14, 399000, 'Teknik lengkap menanam jagung dari pemilihan bibit hingga pasca panen.', 'https://asset.kompas.com/crops/SUtUYLeiCclWljut0zrslqBE7HM=/0x0:1000x667/750x500/data/photo/2021/10/04/615a966655301.jpg'),
+(3, 1, 'Manajemen Lahan Padi', 6, 12, 299000, 'Strategi manajemen lahan untuk tanaman padi yang optimal.', 'https://saprotan-utama.com/wp-content/uploads/2021/12/Jarwo-Super-1.jpeg'),
+(4, 1, 'Budidaya Gandum', 7, 16, 499000, 'Teknik budidaya gandum yang efisien dan efektif.', 'images/Padi.png'),
+(5, 1, 'Optimalisasi Panen Padi', 5, 10, 399000, 'Cara-cara optimal untuk meningkatkan hasil panen padi.', 'https://cdn1-production-images-kly.akamaized.net/R607HtMTb0QSwpfRb5M7DsUD18E=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3038304/original/093143100_1580504207-PANEN_PADI_2-Muhamad_Ridlo.JPG'),
+(6, 2, 'Pertanian Organik Sayuran', 10, 20, 499000, 'Panduan lengkap menanam sayuran secara organik tanpa pestisida kimia.', 'https://unair.ac.id/wp-content/uploads/2020/08/buah-apel-dan-sayuran-hijau-bawang-hasil-tanaman-organik.jpg'),
+(7, 2, 'Pupuk Organik dari Limbah', 5, 8, 299000, 'Cara membuat pupuk organik dari limbah pertanian dan rumah tangga.', 'https://www.bengkulutoday.com/sites/default/files/article/2021-04/sayur_0.jpg'),
+(8, 2, 'Budidaya Sayuran Organik di Greenhouse', 6, 12, 399000, 'Teknik budidaya sayuran organik dalam greenhouse.', 'https://www.pertanianku.com/wp-content/uploads/2019/12/Kiat-Bertanam-Sayuran-Organik-di-Greenhouse.jpg'),
+(9, 2, 'Teknologi Kompos Organik', 4, 6, 199000, 'Pembuatan dan penggunaan teknologi kompos organik.', 'https://pertanian.uma.ac.id/wp-content/uploads/2022/12/cara-membuat-kompos.width-800.jpegquality-80.jpg'),
+(10, 2, 'Teknik Irigasi Organik', 7, 14, 499000, 'Metode irigasi yang sesuai untuk pertanian organik.', 'https://faperta.umsu.ac.id/wp-content/uploads/2023/07/Pengertian-Irigasi-Tetes-Solusi-Efisien-untuk-Menyiram-Tanaman.jpg'),
+(11, 3, 'Teknologi Pengairan Modern', 7, 12, 399000, 'Pengenalan teknologi pengairan modern untuk meningkatkan efisiensi air.', 'https://png.pngtree.com/thumb_back/fw800/background/20221112/pngtree-irrigation-systems-on-sunset-agricultural-gardening-organic-photo-image_28619152.jpg'),
+(12, 3, 'Mesin Pemisah Gabah', 4, 6, 199000, 'Penggunaan mesin pemisah gabah untuk meningkatkan efisiensi produksi.', 'https://cdn.antaranews.com/cache/730x487/2021/03/01/Panen-Padi-Perdana-010321-sb-2-1.jpg'),
+(13, 3, 'Teknologi Pemanenan Modern', 8, 16, 499000, 'Inovasi dalam teknologi pemanenan untuk meningkatkan produktivitas.', 'https://dispertan.cilacapkab.go.id/wp-content/uploads/2020/02/IMG_0674-1500-x-1000.jpg'),
+(14, 3, 'Alat Pertanian Otomatis', 5, 10, 299000, 'Penggunaan alat-alat pertanian otomatis untuk efisiensi kerja.', 'https://www.fulldronesolutions.com/wp-content/uploads/2019/08/alat-pertanian-otomatis-iot.jpeg'),
+(15, 3, 'Sistem Hidroponik Canggih', 9, 18, 599000, 'Teknologi hidroponik untuk pertanian modern dan efisien.', 'https://cdn1.katadata.co.id/media/images/temp/2023/08/30/Ilustrasi_Menanam_Hidroponik-2023_08_30-14_43_38_4527f7ddba22f74c925d6d35a7108eba.jpg'),
+(16, 4, 'Pengolahan Buah Tropis', 6, 10, 599000, 'Teknik pengolahan buah tropis menjadi produk yang bernilai jual tinggi.', 'https://nibble-images.b-cdn.net/nibble/original_images/buah-tropis-warna-warni-istock.jpg'),
+(17, 4, 'Pengolahan Hasil Panen Kopi', 7, 22, 699000, 'Proses pengolahan biji kopi pasca panen menjadi produk siap jual.', 'https://d1r9hss9q19p18.cloudfront.net/uploads/2018/05/coffee-bean-wash.jpg'),
+(18, 4, 'Pengolahan Sayuran Pasca Panen', 8, 16, 499000, 'Teknik pengolahan sayuran pasca panen untuk nilai tambah.', 'https://blogger.googleusercontent.com/img/a/AVvXsEiSMMBPf1M3XAVPHMLJHhEunep09EPnrZyuL2co5zBBY3XjRVS9nIltp3P1us5SDupO4lGQFdb53ZJv9GhN4kThEwbUaqU9d6mjTThWM4WtDxRU8ZUwtqDs4rdASUX4J4ibXZJeCaKpW7LqJ0MekaNMzyOTcE8XtkBC0duOqaLkUXJEWesi95xVhQticg=w1200-h630-p-k-no-nu'),
+(19, 4, 'Teknik Pengawetan Hasil Panen', 5, 10, 399000, 'Metode pengawetan hasil panen untuk memperpanjang umur simpan.', 'https://indonesianchefassociation.com/filemanager/photos/1/pickles-1799731_1920.jpg'),
+(20, 4, 'Pengolahan Biji Kakao', 9, 20, 799000, 'Teknik pengolahan biji kakao menjadi produk olahan berkualitas.', 'https://www.freyabadi.com/hubfs/cocoa-beans-pods-chocolate-bar-pieces-cocoa-powder.jpg'),
+(21, 5, 'Manajemen Irigasi Sawah', 9, 18, 799000, 'Manajemen sistem irigasi untuk sawah agar menghasilkan panen optimal.', 'https://dpu.kulonprogokab.go.id/files/file_uploads/d91bd3419a52676367b298b78158f15a.jpg'),
+(22, 5, 'Optimalisasi Penggunaan Air', 6, 16, 499000, 'Cara mengoptimalkan penggunaan air dalam irigasi untuk hasil maksimal.', 'https://atonergi.com/wp-content/uploads/2023/07/surya-pompa-air.png'),
+(23, 5, 'Teknik Irigasi Tetes', 8, 14, 399000, 'Metode irigasi tetes untuk efisiensi penggunaan air dan nutrisi.', 'https://mediatani.co/wp-content/uploads/2020/11/Irigasi-tetes.jpg'),
+(24, 5, 'Pengelolaan Irigasi Tersier', 5, 12, 299000, 'Manajemen irigasi tersier untuk distribusi air yang efektif.', 'https://balitribune.co.id/sites/default/files/styles/xtra_large/public/field/image/IMG_20200825_161147.jpg?itok=yPWCctdM'),
+(25, 5, 'Sistem Irigasi Berbasis Teknologi', 7, 20, 599000, 'Implementasi sistem irigasi berbasis teknologi modern.', 'https://static.wixstatic.com/media/42902d_316361bf85ff40c5a6d548af6673c98f~mv2.png/v1/fill/w_696,h_464,al_c,q_85,enc_auto/42902d_316361bf85ff40c5a6d548af6673c98f~mv2.png'),
+(26, 6, 'Kewirausahaan Pertanian Dasar', 10, 25, 899000, 'Dasar-dasar kewirausahaan di bidang pertanian untuk pemula.', 'https://agrisustineri.org/wp-content/uploads/2022/05/Kisah-Sukses-Petani-Muda-Jadi-Inspirasi-Generasi-Muda-Untuk-Memajukan-Bidang-Pertanian.jpg'),
+(27, 6, 'Pemasaran Produk Pertanian', 10, 30, 899000, 'Strategi pemasaran efektif untuk produk pertanian di pasar lokal dan global.', 'https://lh7-us.googleusercontent.com/LxpxxenbPI2NWO_F5362Z-E6CYbCABhDG12BQulebna6ssKC0f1eDRoHwceY32z6wBeZ0UZn4dDp2mBonjzHulj2QxiGUbTqW0g5gF5Z7yyBDm0HBog-jAySOotrHUK6OKO-shDpGNpIStgX0T3_RGQ'),
+(28, 6, 'Manajemen Keuangan Pertanian', 6, 15, 499000, 'Teknik manajemen keuangan untuk usaha pertanian.', 'https://assets-a1.kompasiana.com/items/album/2020/08/24/jar-with-savings-small-tree-land-23-2148294854-5f43ac57097f36419a723172.jpg'),
+(29, 6, 'Studi Kelayakan Usaha Pertanian', 8, 20, 699000, 'Analisis kelayakan usaha di bidang pertanian.', 'https://storage.googleapis.com/alami-prod-website-wp-stateless/2023/04/ide-bisnis-di-bidang-pertanian-1024x724.webp'),
+(30, 6, 'Pengembangan Produk Pertanian Inovatif', 5, 18, 599000, 'Teknik inovasi dan pengembangan produk pertanian baru.', 'https://trainingeltasa.com/wp-content/uploads/2022/06/inovasi-pertanian-modern-di-indonesia-2019.jpg');
 
 -- --------------------------------------------------------
 
@@ -356,6 +356,7 @@ INSERT INTO `modul` (`id_modul`, `id_kelas`, `nama_modul`, `isi_modul`, `urutan_
 CREATE TABLE `tanaman` (
   `id_tanaman` int(11) NOT NULL,
   `id_kategori` int(11) NOT NULL,
+  `id_user` int(11) DEFAULT NULL,
   `nama_tanaman` varchar(99) NOT NULL,
   `tanggal_tanam` date NOT NULL,
   `tanggal_panen` date DEFAULT NULL,
@@ -365,34 +366,35 @@ CREATE TABLE `tanaman` (
   `kondisi_batang` enum('Segar','Layu') NOT NULL,
   `kelembapan_tanah` enum('Basah','Kering') NOT NULL,
   `frekuensi_siram` enum('1','2','3','Lebih dari 3') NOT NULL,
-  `keterangan_kondisi` varchar(999) DEFAULT NULL
+  `keterangan_kondisi` varchar(999) DEFAULT NULL,
+  `progress` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`progress`))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tanaman`
 --
 
-INSERT INTO `tanaman` (`id_tanaman`, `id_kategori`, `nama_tanaman`, `tanggal_tanam`, `tanggal_panen`, `media_tanam`, `tinggi_tanaman`, `kondisi_daun`, `kondisi_batang`, `kelembapan_tanah`, `frekuensi_siram`, `keterangan_kondisi`) VALUES
-(21, 101, 'Tomat', '2024-01-01', '2024-04-01', 'Tanah', 50, 'Sehat', 'Segar', 'Basah', '2', 'Pertumbuhan sehat'),
-(22, 102, 'Mentimun', '2024-02-01', '2024-05-01', 'Hidroponik', 30, 'Sebagian Layu', 'Segar', 'Basah', '3', 'Butuh lebih banyak sinar matahari'),
-(23, 103, 'Selada', '2024-03-01', NULL, 'Tanah', 25, 'Layu', 'Layu', 'Kering', '1', 'Terlalu banyak air'),
-(24, 102, 'Bayam', '2024-01-15', '2024-03-15', 'Tanah', 40, 'Sehat', 'Segar', 'Basah', 'Lebih dari 3', 'Tumbuh dengan baik'),
-(25, 102, 'Paprika', '2024-02-20', NULL, 'Hidroponik', 35, 'Sebagian Layu', 'Segar', 'Basah', '2', 'Tanda kekurangan nutrisi'),
-(26, 103, 'Wortel', '2024-01-10', '2024-04-10', 'Tanah', 20, 'Sehat', 'Segar', 'Kering', '1', NULL),
-(27, 103, 'Kemangi', '2024-01-12', '2024-04-12', 'Tanah', 15, 'Sehat', 'Segar', 'Basah', '3', 'Aroma kuat'),
-(28, 101, 'Stroberi', '2024-03-05', NULL, 'Hidroponik', 10, 'Sebagian Layu', 'Layu', 'Kering', '1', 'Hasil rendah'),
-(29, 103, 'Mint', '2024-02-14', '2024-05-14', 'Tanah', 12, 'Layu', 'Segar', 'Basah', '2', 'Perlu dipangkas'),
-(30, 103, 'Rosemary', '2024-01-22', '2024-04-22', 'Tanah', 22, 'Sehat', 'Segar', 'Basah', '3', 'Daun harum'),
-(31, 102, 'Labu', '2024-01-30', '2024-06-01', 'Hidroponik', 60, 'Sebagian Layu', 'Segar', 'Basah', 'Lebih dari 3', 'Buah besar mulai terbentuk'),
-(32, 103, 'Ketumbar', '2024-03-18', NULL, 'Tanah', 18, 'Layu', 'Layu', 'Kering', '1', 'Perlu dipindahkan'),
-(33, 103, 'Cabai', '2024-01-25', '2024-04-25', 'Tanah', 45, 'Sehat', 'Segar', 'Basah', '2', 'Warna cerah'),
-(34, 102, 'Zucchini', '2024-02-05', '2024-05-05', 'Hidroponik', 35, 'Sebagian Layu', 'Segar', 'Basah', '3', 'Pertumbuhan baik'),
-(35, 103, 'Peterseli', '2024-01-20', '2024-04-20', 'Tanah', 10, 'Layu', 'Layu', 'Kering', '1', 'Pengamatan layu'),
-(36, 103, 'Terong', '2024-01-18', '2024-04-18', 'Tanah', 50, 'Sehat', 'Segar', 'Basah', 'Lebih dari 3', 'Daun besar'),
-(37, 102, 'Blueberry', '2024-02-28', '2024-06-28', 'Hidroponik', 25, 'Sebagian Layu', 'Segar', 'Basah', '2', 'Buah kecil mulai muncul'),
-(38, 103, 'Thyme', '2024-01-16', NULL, 'Tanah', 8, 'Layu', 'Segar', 'Kering', '1', 'Lebih menyukai kondisi kering'),
-(39, 103, 'Oregano', '2024-02-10', '2024-05-10', 'Tanah', 12, 'Sehat', 'Segar', 'Basah', '3', 'Rasa kuat'),
-(40, 101, 'Semangka', '2024-03-01', '2024-07-01', 'Hidroponik', 70, 'Sebagian Layu', 'Segar', 'Basah', 'Lebih dari 3', 'Buah mulai terlihat');
+INSERT INTO `tanaman` (`id_tanaman`, `id_kategori`, `id_user`, `nama_tanaman`, `tanggal_tanam`, `tanggal_panen`, `media_tanam`, `tinggi_tanaman`, `kondisi_daun`, `kondisi_batang`, `kelembapan_tanah`, `frekuensi_siram`, `keterangan_kondisi`, `progress`) VALUES
+(21, 101, 1, 'Tomat', '2024-01-01', '2024-04-01', 'Tanah', 50, 'Sehat', 'Segar', 'Basah', '2', 'Pertumbuhan sehat', '[{\"namaTanaman\":\"Tomat\",\"tanggalTanam\":\"2024-01-01\", \"tinggi\":\"10 cm\", \"kondisiDaun\":\"Sehat\", \"kondisiBatang\":\"Sehat\",\"kelembaban\":\"80%\",\"frekuensi\":\"Harian\",\"keterangan\":\"Normal\"}]'),
+(22, 102, 1, 'Mentimun', '2024-02-01', '2024-05-01', 'Hidroponik', 30, 'Sebagian Layu', 'Segar', 'Basah', '3', 'Butuh lebih banyak sinar matahari', NULL),
+(23, 103, 5, 'Selada', '2024-03-01', NULL, 'Tanah', 25, 'Layu', 'Layu', 'Kering', '1', 'Terlalu banyak air', NULL),
+(24, 102, 3, 'Bayam', '2024-01-15', '2024-03-15', 'Tanah', 40, 'Sehat', 'Segar', 'Basah', 'Lebih dari 3', 'Tumbuh dengan baik', NULL),
+(25, 102, 1, 'Paprika', '2024-02-20', NULL, 'Hidroponik', 35, 'Sebagian Layu', 'Segar', 'Basah', '2', 'Tanda kekurangan nutrisi', NULL),
+(26, 103, 1, 'Wortel', '2024-01-10', '2024-04-10', 'Tanah', 20, 'Sehat', 'Segar', 'Kering', '1', NULL, NULL),
+(27, 103, 4, 'Kemangi', '2024-01-12', '2024-04-12', 'Tanah', 15, 'Sehat', 'Segar', 'Basah', '3', 'Aroma kuat', NULL),
+(28, 101, 10, 'Stroberi', '2024-03-05', NULL, 'Hidroponik', 10, 'Sebagian Layu', 'Layu', 'Kering', '1', 'Hasil rendah', NULL),
+(29, 103, 9, 'Mint', '2024-02-14', '2024-05-14', 'Tanah', 12, 'Layu', 'Segar', 'Basah', '2', 'Perlu dipangkas', NULL),
+(30, 103, 2, 'Rosemary', '2024-01-22', '2024-04-22', 'Tanah', 22, 'Sehat', 'Segar', 'Basah', '3', 'Daun harum', NULL),
+(31, 102, 2, 'Labu', '2024-01-30', '2024-06-01', 'Hidroponik', 60, 'Sebagian Layu', 'Segar', 'Basah', 'Lebih dari 3', 'Buah besar mulai terbentuk', NULL),
+(32, 103, 7, 'Ketumbar', '2024-03-18', NULL, 'Tanah', 18, 'Layu', 'Layu', 'Kering', '1', 'Perlu dipindahkan', NULL),
+(33, 103, 2, 'Cabai', '2024-01-25', '2024-04-25', 'Tanah', 45, 'Sehat', 'Segar', 'Basah', '2', 'Warna cerah', NULL),
+(34, 102, 5, 'Zucchini', '2024-02-05', '2024-05-05', 'Hidroponik', 35, 'Sebagian Layu', 'Segar', 'Basah', '3', 'Pertumbuhan baik', NULL),
+(35, 103, 8, 'Peterseli', '2024-01-20', '2024-04-20', 'Tanah', 10, 'Layu', 'Layu', 'Kering', '1', 'Pengamatan layu', NULL),
+(36, 103, 9, 'Terong', '2024-01-18', '2024-04-18', 'Tanah', 50, 'Sehat', 'Segar', 'Basah', 'Lebih dari 3', 'Daun besar', NULL),
+(37, 102, 7, 'Blueberry', '2024-02-28', '2024-06-28', 'Hidroponik', 25, 'Sebagian Layu', 'Segar', 'Basah', '2', 'Buah kecil mulai muncul', NULL),
+(38, 103, 7, 'Thyme', '2024-01-16', NULL, 'Tanah', 8, 'Layu', 'Segar', 'Kering', '1', 'Lebih menyukai kondisi kering', NULL),
+(39, 103, 1, 'Oregano', '2024-02-10', '2024-05-10', 'Tanah', 12, 'Sehat', 'Segar', 'Basah', '3', 'Rasa kuat', NULL),
+(40, 101, 2, 'Semangka', '2024-03-01', '2024-07-01', 'Hidroponik', 70, 'Sebagian Layu', 'Segar', 'Basah', 'Lebih dari 3', 'Buah mulai terlihat', NULL);
 
 -- --------------------------------------------------------
 
@@ -407,6 +409,59 @@ CREATE TABLE `ulasan` (
   `jumlah_bintang` enum('1','2','3','4','5') NOT NULL,
   `isi_ulasan` varchar(9999) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ulasan`
+--
+
+INSERT INTO `ulasan` (`id_ulasan`, `id_user`, `id_kelas`, `jumlah_bintang`, `isi_ulasan`) VALUES
+(1, 1, 1, '5', 'Kelas yang sangat bermanfaat dan menyenangkan.'),
+(2, 1, 5, '4', 'Materinya bagus, tetapi kadang terlalu cepat.'),
+(3, 2, 3, '3', 'Cukup informatif, namun bisa lebih baik.'),
+(4, 3, 2, '5', 'Pengajarnya sangat menguasai materi.'),
+(5, 4, 1, '4', 'Kelas yang baik dan membantu.'),
+(6, 5, 10, '2', 'Materinya kurang mendalam dan tidak terstruktur.'),
+(7, 6, 9, '5', 'Sangat bermanfaat dan terstruktur dengan baik.'),
+(8, 7, 11, '3', 'Biasa saja, perlu perbaikan dalam penyampaian.'),
+(9, 8, 19, '4', 'Materi dan penyampaiannya cukup baik.'),
+(10, 9, 14, '5', 'Sangat puas dengan materi dan pengajarannya.'),
+(11, 10, 13, '3', 'Cukup baik, tapi bisa lebih baik lagi.'),
+(12, 11, 16, '4', 'Pengajarannya cukup memuaskan.'),
+(13, 12, 12, '5', 'Materi dan cara mengajarnya sangat bagus.'),
+(14, 13, 25, '4', 'Bagus, tapi perlu ada lebih banyak contoh kasus.'),
+(15, 14, 9, '3', 'Cukup informatif, tetapi kurang interaktif.'),
+(16, 15, 18, '5', 'Pengajaran yang sangat baik dan terstruktur.'),
+(17, 16, 17, '2', 'Materinya kurang menarik dan terlalu teknis.'),
+(18, 17, 13, '4', 'Pengajaran yang baik dan jelas.'),
+(19, 18, 10, '5', 'Materi yang sangat berguna dan menarik.'),
+(20, 19, 20, '3', 'Cukup baik, tetapi bisa lebih terstruktur.'),
+(21, 20, 14, '4', 'Pengajaran dan materi yang bagus.'),
+(22, 21, 8, '5', 'Sangat puas dengan pengajaran dan materinya.'),
+(23, 22, 6, '4', 'Materi cukup baik dan pengajaran jelas.'),
+(24, 23, 23, '5', 'Sangat baik, pengajaran yang memuaskan.'),
+(25, 24, 17, '3', 'Biasa saja, bisa lebih baik.'),
+(26, 25, 20, '4', 'Materi yang baik dan jelas.'),
+(27, 26, 22, '5', 'Pengajaran yang sangat baik dan menarik.'),
+(28, 27, 15, '4', 'Kelas yang bagus dan bermanfaat.'),
+(29, 28, 21, '3', 'Cukup baik, tapi perlu lebih banyak contoh.'),
+(30, 29, 19, '5', 'Sangat puas dengan materi dan pengajarannya.'),
+(31, 30, 23, '4', 'Pengajaran dan materi yang bagus.'),
+(32, 31, 11, '3', 'Biasa saja, perlu ada perbaikan.'),
+(33, 32, 13, '4', 'Materi cukup baik dan jelas.'),
+(34, 33, 22, '5', 'Pengajaran yang sangat baik dan memuaskan.'),
+(35, 34, 18, '4', 'Kelas yang bagus dan bermanfaat.'),
+(36, 35, 20, '3', 'Cukup baik, tetapi bisa lebih terstruktur.'),
+(37, 36, 23, '5', 'Sangat baik, pengajaran yang memuaskan.'),
+(38, 37, 16, '4', 'Materi dan penyampaiannya cukup baik.'),
+(39, 38, 24, '5', 'Sangat puas dengan materi dan pengajarannya.'),
+(40, 39, 19, '3', 'Cukup informatif, tetapi kurang interaktif.'),
+(41, 40, 22, '4', 'Bagus, tapi perlu ada lebih banyak contoh kasus.'),
+(42, 41, 15, '5', 'Pengajaran yang sangat baik dan terstruktur.'),
+(43, 42, 25, '2', 'Materinya kurang menarik dan terlalu teknis.'),
+(44, 43, 20, '4', 'Pengajaran yang baik dan jelas.'),
+(45, 44, 22, '5', 'Materi yang sangat berguna dan menarik.'),
+(46, 45, 23, '3', 'Biasa saja, bisa lebih baik.'),
+(47, 46, 21, '4', 'Materi yang baik dan jelas.');
 
 -- --------------------------------------------------------
 
@@ -429,16 +484,56 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama`, `email`, `password`, `provinsi`, `kota`, `tanggal_lahir`) VALUES
-(1, 'Ahmad Santoso', 'ahmad.santoso@example.com', 'AhmadS123', 'Jawa Barat', 'Bandung', '1990-01-15'),
-(2, 'Rina Sari', 'rina.sari@example.com', 'RinaS@ri85', 'Jawa Tengah', 'Semarang', '1985-05-20'),
-(3, 'Budi Wirawan', 'budi.wirawan@example.com', 'BudiW!r92', 'Jakarta', 'Jakarta Pusat', '1992-12-03'),
-(4, 'Siti Aminah', 'siti.aminah@example.com', 'SitiA88*', 'Jawa Timur', 'Surabaya', '1988-07-10'),
-(5, 'Indra Saputra', 'indra.saputra@example.com', 'IndraS95#', 'Bali', 'Denpasar', '1995-09-25'),
-(6, 'Ayu Lestari', 'ayu.lestari@example.com', 'AyuLest@ri93', 'Sumatera Utara', 'Medan', '1993-11-30'),
-(7, 'Rizky Ramadhan', 'rizky.ramadhan@example.com', 'RizkyR91$', 'Sulawesi Selatan', 'Makassar', '1991-03-22'),
-(8, 'Desi Kartika', 'desi.kartika@example.com', 'DesiK!87', 'Yogyakarta', 'Yogyakarta', '1987-08-14'),
-(9, 'Joko Prasetyo', 'joko.prasetyo@example.com', 'JokoP@94', 'Jawa Tengah', 'Solo', '1994-02-17'),
-(10, 'Fitriani', 'fitriani@example.com', 'Fitriani96$', 'Kalimantan Timur', 'Samarinda', '1996-04-28');
+(1, 'Ahmad Santoso', 'ahmad.santoso@gmail.com', '306098fa01257f8e4809cbdfca258d8c22c7fb12937cc2616ef06aa20fd8008e', 'Jawa Barat', 'Bandung', '1990-01-15'),
+(2, 'Rina Sari', 'rina.sari@yahoo.com', '041e4e852c36528e050e1d979f30b59870a2353ae6a06a9606f7b353d8a0e8d5', 'Jawa Tengah', 'Semarang', '1985-05-20'),
+(3, 'Budi Wirawan', 'budi.wirawan@gmail.com', 'e8979d2eb704c94fa2fa5044edba1c29232526eec3965ffc64308b6783f2de12', 'Jakarta', 'Jakarta Pusat', '1992-12-03'),
+(4, 'Siti Aminah', 'siti.aminah@yahoo.com', '71c6e47969179c1e831fcf41f4979a3557290a65d7925e6760cfd316389f0729', 'Jawa Timur', 'Surabaya', '1988-07-10'),
+(5, 'Indra Saputra', 'indra.saputra@gmail.com', '98232ae5c9cb601667eae58d8b75e9a38d7a62168d0cc15364cd45c01cf06255', 'Bali', 'Denpasar', '1995-09-25'),
+(6, 'Ayu Lestari', 'ayu.lestari@yahoo.com', '4f0e4b932c439e2362774d87fa67b92b4def4e35a5509863234f5f14bb622428', 'Sumatera Utara', 'Medan', '1993-11-30'),
+(7, 'Rizky Ramadhan', 'rizky.ramadhan@gmail.com', '12bb09e2ce02ba6652444dbacbb86499dddf0c0612f646a7f280e459f57bedfa', 'Sulawesi Selatan', 'Makassar', '1991-03-22'),
+(8, 'Desi Kartika', 'desi.kartika@yahoo.com', 'b72aad3edce6d7f821ba93cbcdcacd038404867d2a8d2cb8ced5af3e082a47b2', 'Yogyakarta', 'Yogyakarta', '1987-08-14'),
+(9, 'Joko Prasetyo', 'joko.prasetyo@gmail.com', '86c2d5963ad19bc5b6d4ae1c98e8de31c68f8108ee1475a9f72b2b219a509587', 'Jawa Tengah', 'Solo', '1994-02-17'),
+(10, 'Fitriani', 'fitriani@yahoo.com', '70d467ffdd2cd50370a2b3ff213748f298d0c3cb92ab580a98c52ae205b65630', 'Kalimantan Timur', 'Samarinda', '1996-04-28'),
+(11, 'Agus Rahman', 'agus.rahman@gmail.com', '1baedd25059490937a8f7a52dbaf5a7c168bc49f5bac0d7bc48bd6b58a84a421', 'Aceh', 'Banda Aceh', '1990-02-10'),
+(12, 'Dewi Anjani', 'dewi.anjani@yahoo.com', '452471a1b359ca017ed315f3e673d2a45210c26f62d06798b60c9eceae680165', 'Jambi', 'Jambi', '1988-05-12'),
+(13, 'Hendra Wijaya', 'hendra.wijaya@gmail.com', '02b468120eb4d2268e42bdd2be97c834d9ddb15e4bf4642baf15794cccd6d6dc', 'Banten', 'Tangerang', '1992-03-18'),
+(14, 'Sri Utami', 'sri.utami@yahoo.com', '34806f234e0cbdb9709bc6f9070803f481150a7ca5c6dd27a5bf5bfef957695e', 'Lampung', 'Bandar Lampung', '1989-09-29'),
+(15, 'Fajar Gunawan', 'fajar.gunawan@gmail.com', 'f14bfc3957cc08992e42f28e0167ffc65bac0633c69f1aaf0d378dcacfdd9114', 'Kalimantan Selatan', 'Banjarmasin', '1991-01-22'),
+(16, 'Maya Sari', 'maya.sari@yahoo.com', '3688058a6965c4c8e143d7002afb557fe910657ad819714abb0356c7551c84b7', 'Bengkulu', 'Bengkulu', '1993-04-18'),
+(17, 'Andi Saputra', 'andi.saputra@gmail.com', 'a589ffa7732ffd2f26d23953e26af5c8f6c006690b7982d5f07f671915c0b561', 'Kepulauan Riau', 'Batam', '1995-06-15'),
+(18, 'Lina Marlina', 'lina.marlina@yahoo.com', 'ec66a94298e85eda53c99fb9c8fca473ee8a6ed2a5a4c90d8d44906f86695c07', 'Maluku', 'Ambon', '1986-10-23'),
+(19, 'Heri Susanto', 'heri.susanto@gmail.com', '381647cdaa5a63605b4a979f2cd34df89c95d7ea1320fc98b7ea9b550e74b58f', 'Nusa Tenggara Barat', 'Mataram', '1990-08-19'),
+(20, 'Dian Purnama', 'dian.purnama@yahoo.com', '3131e677857a95f4501c5f0d358d043529d35352425f5caed56bbe141b8d4832', 'Nusa Tenggara Timur', 'Kupang', '1992-12-01'),
+(21, 'Farid Syah', 'farid.syah@gmail.com', '0d9c232de06434bd8e9bb5ed4c350e253f2ecae464eb25b4554c7fc2e5a95e6b', 'Papua', 'Jayapura', '1989-11-17'),
+(22, 'Rudi Hartono', 'rudi.hartono@yahoo.com', '3ad4e3ca913054dc0f23bbdd52ac8a34f63b381b92d904ccea8b908997da7104', 'Riau', 'Pekanbaru', '1991-07-21'),
+(23, 'Winda Lestari', 'winda.lestari@gmail.com', 'feca7185fba05d0ab8b2288f0d4219b0ad2e4766454ec9bb2d5ef676ecd10b3d', 'Sulawesi Barat', 'Mamuju', '1994-09-14'),
+(24, 'Yusuf Maulana', 'yusuf.maulana@yahoo.com', '7772448cf067ba366d81d3133feb61e449e65e3e6d516371cb2754e329c691b4', 'Sulawesi Tengah', 'Palu', '1992-02-28'),
+(25, 'Dika Putra', 'dika.putra@gmail.com', 'dfa2ff914d8a9586450aa638ba5999b14a0aa95d625207ac1c31678b5e5ac623', 'Sulawesi Tenggara', 'Kendari', '1987-03-11'),
+(26, 'Mega Sari', 'mega.sari@yahoo.com', 'f09ce08f00af817620fdd86ca3ce450339f2e897629abf6fec94cdda32249ad3', 'Sumatera Barat', 'Padang', '1985-04-27'),
+(27, 'Tri Wahyuni', 'tri.wahyuni@gmail.com', '7e036af29b992fafd7bb2e9f5fc7827fe6b70808fefae469b60f4497910b9aca', 'Sumatera Selatan', 'Palembang', '1990-05-07'),
+(28, 'Rian Kurniawan', 'rian.kurniawan@yahoo.com', '4fc0fd566fc8f835d3b92d7f9788dc04bd279076887061fbd06be84b17c00296', 'Sulawesi Utara', 'Manado', '1991-06-16'),
+(29, 'Lutfi Hakim', 'lutfi.hakim@gmail.com', 'd396eb8f2eea2ce4d583d05b7581101603d456a52584da31ad87c60f2a05773c', 'Gorontalo', 'Gorontalo', '1992-07-24'),
+(30, 'Hana Pertiwi', 'hana.pertiwi@yahoo.com', '2e0ebdaba0e8e726daf3cab3200afa51365d6d2527f4a4847c19ecc91c310608', 'Maluku Utara', 'Ternate', '1989-08-30'),
+(31, 'Rina Amelia', 'rina.amelia@gmail.com', '041e4e852c36528e050e1d979f30b59870a2353ae6a06a9606f7b353d8a0e8d5', 'Papua Barat', 'Manokwari', '1993-09-15'),
+(32, 'Dedi Prasetyo', 'dedi.prasetyo@yahoo.com', '6a06e799110e15fe788ddc4dc62967d5e01a8acb8266ba24d8b13148664c4139', 'Bangka Belitung', 'Pangkal Pinang', '1986-10-05'),
+(33, 'Tia Lestari', 'tia.lestari@gmail.com', '1d35763a8f2484b34dd3f99f8b8bad4eb487466ac6a85e8424640553ecd1ba54', 'Jawa Barat', 'Depok', '1994-11-20'),
+(34, 'Bambang Sutrisno', 'bambang.sutrisno@yahoo.com', '2869bfa90136e138dcf37b35c5beb59313fa12cb37e71db0390f2d4d51fabb88', 'Jawa Timur', 'Malang', '1988-01-29'),
+(35, 'Anita Puspita', 'anita.puspita@gmail.com', '6025e955173e3735681bb473587da7e85140eade8d4398a366ec01f59eba2834', 'Jawa Tengah', 'Purwokerto', '1990-02-26'),
+(36, 'Eko Purnomo', 'eko.purnomo@yahoo.com', '23e290bcc403cbdecd44305586908da8312f18f59c5a059488ba57fdb8c90335', 'Yogyakarta', 'Bantul', '1991-03-09'),
+(37, 'Novi Wijayanti', 'novi.wijayanti@gmail.com', '372de1c957326e437938d0f4198dbea6ee1bea6be410d9f9cec6a0d94ef847a7', 'Jawa Tengah', 'Magelang', '1992-04-14'),
+(38, 'Sandy Saputra', 'sandy.saputra@yahoo.com', 'bf8d1d240f5a29dd4d3a1579b609ac3497ba200e9a49ce3078e059260b4b03fc', 'Jawa Barat', 'Cimahi', '1993-05-23'),
+(39, 'Tuti Hartati', 'tuti.hartati@gmail.com', '0ee915a4c4e37d477c2ff905137d1732a336daf734528773fdffab1274839033', 'Jawa Timur', 'Kediri', '1994-06-18'),
+(40, 'Arief Firmansyah', 'arief.firmansyah@yahoo.com', '438a0fcbb563cb2a74c4828da4abb4d20003c28f74cd6cee5901d6ba112bbfd7', 'Jawa Barat', 'Tasikmalaya', '1995-07-27'),
+(41, 'Widya Lestari', 'widya.lestari@gmail.com', '712755fe5087f3df511cf8394c60f96edcbaf23cac6e181502fd381ff178d5c2', 'Jakarta', 'Jakarta Timur', '1986-08-04'),
+(42, 'Bayu Nugroho', 'bayu.nugroho@yahoo.com', '414058c6f7fad3cad2dccd0ae8eb91f318617d36e5d9326e042db79703d13d10', 'Jawa Timur', 'Blitar', '1987-09-12'),
+(43, 'Sari Rahmawati', 'sari.rahmawati@gmail.com', 'ec0dbbe4afd86f8e1c3e9810f5ebd7a1c23c3a286dc9b3ca4d9e0389a244b290', 'Jawa Tengah', 'Klaten', '1988-10-30'),
+(44, 'Agung Setiawan', 'agung.setiawan@yahoo.com', '933594b02025150a9eef39600171e55372e01e3e92a9c4ffcebae896eddf4fbf', 'Jawa Barat', 'Cirebon', '1989-11-22'),
+(45, 'Citra Permata', 'citra.permata@gmail.com', '34dbbc8f279e1e724a4faa512603c56d47e9860a66173d2a0074a8b06916e796', 'Jawa Tengah', 'Tegal', '1990-12-19'),
+(46, 'Dika Wijaya', 'dika.wijaya@yahoo.com', 'dfa2ff914d8a9586450aa638ba5999b14a0aa95d625207ac1c31678b5e5ac623', 'Jawa Timur', 'Madiun', '1991-01-15'),
+(47, 'naia shaffa', 'naia.shaffa@gmail.com', '9e0cb0ffe691bec93be28119626e0a8a48aafe2bbfcca9ef5dc386811cfc2c83', 'Yogyakarta', 'Sleman', '2003-12-29'),
+(48, 'rudi bambang', 'rudi.bambang@gmail.com', '3ad4e3ca913054dc0f23bbdd52ac8a34f63b381b92d904ccea8b908997da7104', 'Jawa Tengah', 'Semarang', '1980-04-28'),
+(49, 'Admin', 'admin@gmail.com', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'Jakarta', 'Jakarta Pusat', '2019-10-13'),
+(50, 'Agus Budi', 'agus.budi@kementan.go.id', '1baedd25059490937a8f7a52dbaf5a7c168bc49f5bac0d7bc48bd6b58a84a421', 'Jakarta', 'Jakarta Pusat', '2019-10-13');
 
 -- --------------------------------------------------------
 
@@ -451,6 +546,242 @@ CREATE TABLE `user_kelas` (
   `id_user` int(11) NOT NULL,
   `id_kelas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_kelas`
+--
+
+INSERT INTO `user_kelas` (`id_user_kelas`, `id_user`, `id_kelas`) VALUES
+(1, 1, 1),
+(2, 1, 5),
+(3, 1, 9),
+(4, 1, 15),
+(5, 1, 22),
+(6, 2, 3),
+(7, 2, 6),
+(8, 2, 12),
+(9, 2, 18),
+(10, 2, 25),
+(11, 3, 2),
+(12, 3, 4),
+(13, 3, 7),
+(14, 3, 11),
+(15, 3, 19),
+(16, 3, 23),
+(17, 4, 1),
+(18, 4, 8),
+(19, 4, 14),
+(20, 4, 21),
+(21, 5, 5),
+(22, 5, 10),
+(23, 5, 15),
+(24, 5, 20),
+(25, 5, 25),
+(26, 6, 2),
+(27, 6, 4),
+(28, 6, 6),
+(29, 6, 9),
+(30, 6, 17),
+(31, 7, 3),
+(32, 7, 7),
+(33, 7, 11),
+(34, 7, 13),
+(35, 7, 22),
+(36, 8, 5),
+(37, 8, 8),
+(38, 8, 12),
+(39, 8, 19),
+(40, 8, 24),
+(41, 9, 1),
+(42, 9, 4),
+(43, 9, 10),
+(44, 9, 14),
+(45, 9, 21),
+(46, 10, 2),
+(47, 10, 6),
+(48, 10, 9),
+(49, 10, 13),
+(50, 10, 20),
+(51, 11, 3),
+(52, 11, 5),
+(53, 11, 7),
+(54, 11, 11),
+(55, 11, 16),
+(56, 12, 1),
+(57, 12, 8),
+(58, 12, 12),
+(59, 12, 18),
+(60, 12, 22),
+(61, 13, 2),
+(62, 13, 4),
+(63, 13, 7),
+(64, 13, 14),
+(65, 13, 25),
+(66, 14, 3),
+(67, 14, 5),
+(68, 14, 9),
+(69, 14, 15),
+(70, 14, 20),
+(71, 15, 1),
+(72, 15, 6),
+(73, 15, 8),
+(74, 15, 10),
+(75, 15, 18),
+(76, 16, 2),
+(77, 16, 4),
+(78, 16, 12),
+(79, 16, 17),
+(80, 16, 23),
+(81, 17, 3),
+(82, 17, 5),
+(83, 17, 11),
+(84, 17, 13),
+(85, 17, 24),
+(86, 18, 1),
+(87, 18, 7),
+(88, 18, 8),
+(89, 18, 10),
+(90, 18, 15),
+(91, 19, 2),
+(92, 19, 6),
+(93, 19, 9),
+(94, 19, 12),
+(95, 19, 20),
+(96, 20, 4),
+(97, 20, 7),
+(98, 20, 11),
+(99, 20, 14),
+(100, 20, 21),
+(101, 21, 3),
+(102, 21, 5),
+(103, 21, 8),
+(104, 21, 16),
+(105, 21, 22),
+(106, 22, 1),
+(107, 22, 6),
+(108, 22, 9),
+(109, 22, 12),
+(110, 22, 19),
+(111, 23, 2),
+(112, 23, 7),
+(113, 23, 10),
+(114, 23, 14),
+(115, 23, 23),
+(116, 24, 3),
+(117, 24, 5),
+(118, 24, 11),
+(119, 24, 17),
+(120, 24, 25),
+(121, 25, 1),
+(122, 25, 6),
+(123, 25, 8),
+(124, 25, 13),
+(125, 25, 20),
+(126, 26, 2),
+(127, 26, 4),
+(128, 26, 10),
+(129, 26, 18),
+(130, 26, 22),
+(131, 27, 3),
+(132, 27, 7),
+(133, 27, 11),
+(134, 27, 15),
+(135, 27, 24),
+(136, 28, 1),
+(137, 28, 5),
+(138, 28, 9),
+(139, 28, 12),
+(140, 28, 21),
+(141, 29, 2),
+(142, 29, 6),
+(143, 29, 8),
+(144, 29, 14),
+(145, 29, 19),
+(146, 30, 4),
+(147, 30, 7),
+(148, 30, 10),
+(149, 30, 16),
+(150, 30, 23),
+(151, 31, 3),
+(152, 31, 5),
+(153, 31, 9),
+(154, 31, 11),
+(155, 31, 20),
+(156, 32, 1),
+(157, 32, 6),
+(158, 32, 8),
+(159, 32, 13),
+(160, 32, 17),
+(161, 33, 2),
+(162, 33, 7),
+(163, 33, 10),
+(164, 33, 12),
+(165, 33, 22),
+(166, 34, 3),
+(167, 34, 5),
+(168, 34, 11),
+(169, 34, 18),
+(170, 34, 25),
+(171, 35, 1),
+(172, 35, 4),
+(173, 35, 8),
+(174, 35, 15),
+(175, 35, 20),
+(176, 36, 2),
+(177, 36, 6),
+(178, 36, 9),
+(179, 36, 14),
+(180, 36, 23),
+(181, 37, 3),
+(182, 37, 7),
+(183, 37, 10),
+(184, 37, 16),
+(185, 37, 21),
+(186, 38, 1),
+(187, 38, 5),
+(188, 38, 11),
+(189, 38, 18),
+(190, 38, 24),
+(191, 39, 2),
+(192, 39, 4),
+(193, 39, 8),
+(194, 39, 13),
+(195, 39, 19),
+(196, 40, 3),
+(197, 40, 6),
+(198, 40, 10),
+(199, 40, 17),
+(200, 40, 22),
+(201, 41, 1),
+(202, 41, 5),
+(203, 41, 9),
+(204, 41, 15),
+(205, 41, 23),
+(206, 42, 2),
+(207, 42, 7),
+(208, 42, 11),
+(209, 42, 19),
+(210, 42, 25),
+(211, 43, 3),
+(212, 43, 4),
+(213, 43, 8),
+(214, 43, 14),
+(215, 43, 20),
+(216, 44, 1),
+(217, 44, 6),
+(218, 44, 10),
+(219, 44, 16),
+(220, 44, 22),
+(221, 45, 2),
+(222, 45, 7),
+(223, 45, 13),
+(224, 45, 18),
+(225, 45, 23),
+(226, 46, 3),
+(227, 46, 5),
+(228, 46, 9),
+(229, 46, 15),
+(230, 46, 21);
 
 --
 -- Indexes for dumped tables
@@ -494,7 +825,8 @@ ALTER TABLE `modul`
 --
 ALTER TABLE `tanaman`
   ADD PRIMARY KEY (`id_tanaman`),
-  ADD KEY `id_kategori` (`id_kategori`);
+  ADD KEY `id_kategori` (`id_kategori`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `ulasan`
@@ -514,7 +846,9 @@ ALTER TABLE `user`
 -- Indexes for table `user_kelas`
 --
 ALTER TABLE `user_kelas`
-  ADD PRIMARY KEY (`id_user_kelas`);
+  ADD PRIMARY KEY (`id_user_kelas`),
+  ADD KEY `user_mengikuti` (`id_user`),
+  ADD KEY `kelas_diikuti` (`id_kelas`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -542,25 +876,25 @@ ALTER TABLE `modul`
 -- AUTO_INCREMENT for table `tanaman`
 --
 ALTER TABLE `tanaman`
-  MODIFY `id_tanaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_tanaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `ulasan`
 --
 ALTER TABLE `ulasan`
-  MODIFY `id_ulasan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ulasan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `user_kelas`
 --
 ALTER TABLE `user_kelas`
-  MODIFY `id_user_kelas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=231;
 
 --
 -- Constraints for dumped tables
@@ -588,7 +922,8 @@ ALTER TABLE `modul`
 -- Constraints for table `tanaman`
 --
 ALTER TABLE `tanaman`
-  ADD CONSTRAINT `id_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori_tanaman` (`id_kategori`);
+  ADD CONSTRAINT `id_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori_tanaman` (`id_kategori`),
+  ADD CONSTRAINT `tanaman_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 
 --
 -- Constraints for table `ulasan`
@@ -596,6 +931,13 @@ ALTER TABLE `tanaman`
 ALTER TABLE `ulasan`
   ADD CONSTRAINT `dari_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
   ADD CONSTRAINT `untuk_kelas` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`);
+
+--
+-- Constraints for table `user_kelas`
+--
+ALTER TABLE `user_kelas`
+  ADD CONSTRAINT `kelas_diikuti` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`),
+  ADD CONSTRAINT `user_mengikuti` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
