@@ -1,0 +1,286 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #F0F4FF;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 85px;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  background: #4B6252;
+  padding: 25px 20px;
+  transition: all 0.4s ease;
+}
+
+.sidebar:hover {
+  width: 260px;
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar-header img {
+  width: 42px;
+}
+
+.sidebar .sidebar-header h2 {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 23px;
+}
+
+.sidebar-links h4 {
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  margin: 10px 0;
+  position: relative;
+}
+
+.sidebar-links h4 span {
+  opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+  opacity: 1;
+}
+
+.sidebar-links .menu-separator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(1);
+  transform: translateY(-50%);
+  background: #ffffff;
+  transform-origin: right;
+  transition-delay: 0.2s;
+}
+
+.sidebar:hover .sidebar-links .menu-separator {
+  transition-delay: 0s;
+  transform: scaleX(0);
+}
+
+.sidebar-links {
+  list-style: none;
+  margin-top: 20px;
+  height: 80%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.sidebar-links::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 15px 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.sidebar-links li a:hover {
+  color: #161a2d;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.user-account {
+  margin-top: auto;
+  padding: 12px 10px;
+  margin-left: -10px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  color: #161a2d;
+}
+
+.user-profile img {
+  width: 42px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.user-profile h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user-profile span {
+  font-size: 0.775rem;
+  font-weight: 600;
+}
+
+.user-detail {
+  margin-left: 23px;
+  white-space: nowrap;
+}
+
+.sidebar:hover .user-account {
+  background: #fff;
+  border-radius: 4px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  color: #161a2d;
+}
+
+.user-profile img {
+  width: 42px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.user-profile h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user-profile span {
+  font-size: 0.775rem;
+  font-weight: 600;
+}
+
+.user-detail {
+  margin-left: 23px;
+  white-space: nowrap;
+}
+
+.main-content {
+  margin-left: 80px; /* Sesuaikan margin saat sidebar tertutup */
+  padding: 20px;
+  width: calc(100% - 80px);
+  transition: margin-left 0.3s, width 0.3s;
+}
+
+.sidebar:hover ~ .main-content {
+  margin-left: 260px; /* Sesuaikan margin saat sidebar terbuka */
+  width: calc(100% - 260px);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.intro-section {
+  background: #2d523d;
+  color: white;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-section .intro-text {
+  max-width: 60%;
+}
+
+.intro-section button {
+  background: white;
+  color: #2d523d;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lanjutkan-melihat,
+.kelas-anda,
+.progres-tanaman,
+.statistik-kamu {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card-info {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress {
+  background: #4caf50;
+  height: 100%;
+}
+
+.statistik-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.statistik-content .chart {
+  width: 150px;
+  height: 150px;
+  background: #e0e0e0;
+  border-radius: 50%;
+}

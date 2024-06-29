@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Re:Farm - LandingPage</title>
     <link rel="stylesheet" href="./css/landing_page.css">
+    <link rel="icon" href="./images/Logo ReFarm.png" type="image/png">
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,7 @@
             <div class="konten">
                 <h1>Disini Ada Kata Menarik</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo aliquam dicta repudiandae, et nesciunt doloremque, molestias nam corporis laudantium labore impedit ipsa quas deserunt non asperiores laborum nostrum nemo!</p>
-                <button>Mulai</button>
+                <a href="./login.php"><button>Mulai</button></a>
             </div>
             <div class="gambar">
                 <img src="./images/pngwing_6.png" alt="">

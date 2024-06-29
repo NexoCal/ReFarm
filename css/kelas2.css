@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu-item {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #e0e0e0;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    background-color: #d0d0d0;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+.content {
+    flex-grow: 1;
+    padding-top: 20px;
+    padding-left: 50px;
+    margin-left: 320px; /* Adjusted to accommodate fixed sidebar */
+}
+
+.image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+}
