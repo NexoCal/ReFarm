@@ -206,8 +206,25 @@ body {
   color: #fff;
 }
 
-.class-description {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #555;
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.module-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.module-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.module-item:hover {
+  background: #e6f4ea;
 }
