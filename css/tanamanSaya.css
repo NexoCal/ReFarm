@@ -342,3 +342,43 @@ body {
     flex: 0 0 auto; /* Ensure cards take their content width */
   }
 }
+
+.progress-tabel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.tabel-header, .tabel-row {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabel-header {
+  font-weight: 600;
+}
+
+.tabel-col {
+  flex: 1;
+}
+
+
+.btn-add,
+.btn-save,
+.btn-cancel {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #4caf50;
+  color: white;
+}

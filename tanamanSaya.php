@@ -10,58 +10,6 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
   />
   <link rel="stylesheet" href="css/tanamanSaya.css" />
-
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Tanggal', 'Pohon Pisang', 'Padi'],
-        ['1', 2, 4],
-        ['2', 5, 7],
-        ['3', 8, 10],
-        ['4', 11, 13],
-        ['5', 14, 17],
-        ['6', 17, 20],
-        ['7', 20, 23],
-        ['8', 23, 27],
-        ['9', 26, 30],
-        ['10', 29, 33],
-        ['11', 32, 37],
-        ['12', 35, 40],
-        ['13', 38, 43],
-        ['14', 41, 47],
-        ['15', 44, 50],
-        ['16', 47, 53],
-        ['17', 50, 57],
-        ['18', 53, 60],
-        ['19', 56, 63],
-        ['20', 59, 67],
-        ['21', 62, 70],
-        ['22', 65, 73],
-        ['23', 68, 77],
-        ['24', 71, 80],
-        ['25', 74, 83],
-        ['26', 77, 87],
-        ['27', 80, 90],
-        ['28', 83, 93],
-        ['29', 86, 97],
-        ['30', 89, 100]
-      ]);
-
-      var options = {
-        title: 'Perkembangan Tanaman Bulan Juni',
-        curveType: 'function',
-        legend: { position: 'right' }
-      };
-
-      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-      chart.draw(data, options);
-    }
-  </script>
 </head>
 <body>
   <aside class="sidebar">
@@ -74,12 +22,12 @@
         <div class="menu-separator"></div>
       </h4>
       <li>
-        <a href="dashboard.html">
+        <a href="dashboard.php">
           <span class="material-symbols-outlined">dashboard</span>Dashboard
         </a>
       </li>
       <li>
-        <a href="kelas.html">
+        <a href="kelas.php">
           <span class="material-symbols-outlined">book</span>Kelas
         </a>
       </li>
@@ -89,25 +37,11 @@
         </a>
       </li>
       <li>
-        <a href="diskusi.html">
+        <a href="diskusi.php">
           <span class="material-symbols-outlined">communication</span>Diskusi
         </a>
       </li>
-      <li>
-        <a href="logout.html">
-          <span class="material-symbols-outlined">logout</span>Logout
-        </a>
-      </li>
     </ul>
-    <div class="user-account">
-      <div class="user-profile">
-        <img src="images/user.jpg" alt="User Profile" />
-        <div class="user-detail">
-          <h3>Jacob</h3>
-          <span>Logout</span>
-        </div>
-      </div>
-    </div>
   </aside>
   <div class="main-content">
     <div class="dashboard-header">
@@ -156,40 +90,39 @@
         </div>
       </div>  
       <div class="progress-chart">
-        <div id="curve_chart" style="width: 1000; height: 500px"></div>
-      </div>
-      <div class="daftar-tanaman">
-        <h2>Daftar Tanaman Saya</h2>
-        <div class="card-container">
-          <div class="card">
-            <a href="tanaman.php" class="active">
-              <div class="card-image">
-                <img src="images/pisang.jpg" alt="foto" width="250" height="250" border-radius="20">
-              </div>
-              <div class="card-title"><h2>Pohon Pisang</h2></div>
-            </a>
-            <div class="card-info">
-              <div class="card-info-item">
-                <span class="material-symbols-outlined">sync</span>
-                1 Bulan 13 Hari
-              </div>
-              <div class="card-info-item">
-                <span class="material-symbols-outlined">timelapse</span>
-                2 Hari
-              </div>
-            </div>
+        <h2>Progress Tanaman</h2>
+        <div class="progress-tabel">
+          <div class="tabel-header">
+            <div class="tabel-col">No</div>
+            <div class="tabel-col">Nama Tanaman</div>
+            <div class="tabel-col">Terakhir kali diupdate</div>
+            <div class="tabel-col">Rata rata tinggi tanaman perhari</div>
+            <div class="tabel-col">Status tanaman</div>
           </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="images/pisang.jpg" alt="foto" width="250" height="250">
-            </div>
-            <div class="card-title">
-              <a href="tambahTanaman.php">
-                <h2>Tambah Tanaman</h2>
-              </a>
-            </div>
+          <div class="tabel-row" onclick="window.location.href='tanaman.php'">
+            <div class="tabel-col">1</div>
+            <div class="tabel-col">Pohon Pisang</div>
+            <div class="tabel-col">2 Hari Lalu</div>
+            <div class="tabel-col">2 cm</div>
+            <div class="tabel-col">Sehat</div>
           </div>
+          <div class="tabel-row" onclick="window.location.href='tanaman.php'">
+            <div class="tabel-col">2</div>
+            <div class="tabel-col">Padi</div>
+            <div class="tabel-col">1 Hari Lalu</div>
+            <div class="tabel-col">1.5 cm</div>
+            <div class="tabel-col">Sehat</div>
+          </div>
+          <div class="buttons">
+                <button class="btn-add" id="btn-add">Tambah</button>
+            </div>
         </div>
+        <script>
+    document.getElementById('btn-add').addEventListener('click', function() {
+      window.location.href = 'tambahTanaman.php';
+    });
+  </script>
+      </div>
       </div>
     </div>
   </div>

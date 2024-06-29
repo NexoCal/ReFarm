@@ -22,20 +22,17 @@
           <div class="menu-separator"></div>
         </h4>
         <li>
-          <a href="dashboard.html">
+          <a href="dashboard.php">
             <span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
         </li>
         <li>
-          <a href="kelas.html"><span class="material-symbols-outlined"> book </span>Kelas</a>
+          <a href="kelas.php"><span class="material-symbols-outlined"> book </span>Kelas</a>
         </li>
         <li>
           <a href="tanamanSaya.php"><span class="material-symbols-outlined"> Psychiatry </span>Tanaman Saya</a>
         </li>
         <li>
-          <a href="diskusi.html"><span class="material-symbols-outlined"> communication </span>Diskusi</a>
-        </li>
-        <li>
-          <a href="logout.html"><span class="material-symbols-outlined"> logout </span>Logout</a>
+          <a href="diskusi.php"><span class="material-symbols-outlined"> communication </span>Diskusi</a>
         </li>
       </ul>
     </aside>
@@ -51,11 +48,10 @@
     </div>
     <div class="intro-section">
       <div class="intro-text">
-        <h2>Statistik Perkembangan Tanaman</h2>
+        <h2>Tambah Tanaman</h2>
       </div>
     </div>
       <section class="form-section">
-      <h2>Tambah Tanaman</h2>
         <form>
           <div class="form-group">
             <label for="nama-tanaman">Nama Tanaman</label>
