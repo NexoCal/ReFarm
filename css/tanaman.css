@@ -330,7 +330,8 @@ body {
 
 .btn-add,
 .btn-save,
-.btn-cancel {
+.btn-cancel,
+.btn-analyze {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -339,6 +340,12 @@ body {
 
 .btn-add {
   background-color: #4caf50;
+  color: white;
+}
+
+
+.btn-analyze {
+  background-color: #49b16f;
   color: white;
 }
 

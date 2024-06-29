@@ -3,10 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnSave = document.getElementById("btn-save");
     const btnCancel = document.getElementById("btn-cancel");
     const formContainer = document.getElementById("form-container");
+    const btnanalyze = document.getElementById("btn-analyze");
 
     btnAdd.addEventListener("click", function () {
         formContainer.style.display = "block";
         btnAdd.style.display = "none";
+        btnanalyze.style.display = "none";
         btnSave.style.display = "block";
         btnCancel.style.display = "block";
     });
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btnCancel.addEventListener("click", function () {
         formContainer.style.display = "none";
         btnAdd.style.display = "block";
+        btnanalyze.style.display = "block";
         btnSave.style.display = "none";
         btnCancel.style.display = "none";
     });

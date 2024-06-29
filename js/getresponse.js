@@ -1,17 +1,17 @@
 function getresponse(){
 
-    var tgl = document.getElementById('tanggal')
-    var tinggi = document.getElementById('tinggi-tanaman')
-    var daun = document.getElementById('kondisi-daun')
-    var batang = document.getElementById('kondisi-batang')
-    var lembab = document.getElementById('kelembapan-tanah')
-    var frek = document.getElementById('frekuensi-siram')
-    var keterangan = document.getElementById('keterangan-kondisi')
+    var tgl = document.getElementById('latest-tanggal').innerText
+    var tinggi = document.getElementById('latest-tinggi').innerText
+    var daun = document.getElementById('latest-daun').innerText
+    var batang = document.getElementById('latest-batang').innerText
+    var lembab = document.getElementById('latest-lembab').innerText
+    var frek = document.getElementById('latest-freq').innerText
+    var keterangan = document.getElementById('latest-keterangan').innerText
 
     var response = document.getElementById('output')
 
-    var prompt = 'give a suggestion on what to farm'
-
+    
+    //alert("Plant Name: Tomat\n" + "Plant Height: "+tinggi+"\n" + "Plant Leaves Condition: "+daun+"\n"+"Plant Trunk Condition: "+batang+"\n"+"Plant Humidity: "+lembab+"\n"+"Plant Watering Frequncy: "+frek+"\n"+"using the data given to you, give me a suggestion on what should i do to make my plantflourish and estimate how many days left before harvest, response using this format\n\n<This is where you give a short explanation about the current state of the plant>\n<This is where you put the estimated time before harvest, use format 'estimated day before harvest : 10 - 20 days'. just use that format and dont add anyword>\n<this is where you put suggestion on what should i do to take care of the plant and make it flourish>")
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function(){
@@ -20,7 +20,7 @@ function getresponse(){
         }
     }
 
-    request.open("GET", "gptresponse.php?prompt=" + prompt, true)
+    request.open("GET", "gptresponse.php?tinggi=" + tinggi + "&daun=" + daun + "&batang=" + batang + "&lembab=" + lembab + "&freq=" + frek, true)
     request.send();
 
 }
