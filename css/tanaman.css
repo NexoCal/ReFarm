@@ -17,7 +17,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 85px;
   display: flex;
   overflow-x: hidden;
@@ -114,8 +114,7 @@ body {
 }
 
 .sidebar:hover ~ .main-content {
-  margin-left: 260px; /* Sesuaikan margin saat sidebar terbuka */
-  width: calc(100% - 260px);
+  
 }
 
 .sidebar:hover .user-account {
@@ -325,7 +324,7 @@ body {
 .buttons {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .btn-add,
@@ -357,4 +356,19 @@ body {
 .btn-cancel {
   background-color: #f44336;
   color: white;
+}
+
+.gptresponse{
+  display: flex;
+}
+
+.output-space{
+  width: 100%;
+  height: calc(15vw);
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  border: 2px solid #ccc;
+  padding: 12px 20px;
+  resize: none;
+  margin-top: 10px;
 }

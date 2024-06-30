@@ -189,6 +189,9 @@ include "databasekey.php";
                     <label for="Pengamatan">Pengamatan Anda</label>
                     <input type="text" id="pengamatan-anda" placeholder="Pengamatan Anda" />
                 </div>
+                <div class="gptresponse">
+                    <textarea class="output-space" name="output" id="output" readonly style="display: none; "></textarea>
+                </div>
                 <div class="buttons">
                     <button class="btn-add" id="btn-add">Tambah</button>
                     <button class="btn-analyze" id="btn-analyze" onclick="getresponse()">Analyze</button>

@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php'; // remove this line if you use a PHP F
 
 use Orhanerday\OpenAi\OpenAi;
 
-// $open_ai = new OpenAi(apikey);
+// $open_ai = new OpenAi(nothing here);
 
 // echo $open_ai->listModels(); // you should execute the request FIRST!
 // var_dump($open_ai->getCURLInfo()); // You can call the request
@@ -33,7 +33,9 @@ Estimated Time Before Harvest:
 [this is where you give a estimated the number of day before harvest, use the format of range example '10 - 20 days left']
 
 Suggestions for Care:
-[This is where you put suggestions on what I should do to take care of the plant and make it flourish.]";
+[This is where you put suggestions on what I should do to take care of the plant and make it flourish. Maximum suggestion is 5]
+
+just plaintext dont use any bolding or any text styling";
 
     $response = $open_ai->chat([
         'model' => 'gpt-4o',
@@ -47,8 +49,8 @@ Suggestions for Care:
                 "content" => $message
             ],
         ],
-        'temperature' => 1.0,
-        'max_tokens' => 1000,
+        'temperature' => 0.7,
+        'max_tokens' => 2000,
         'frequency_penalty' => 0,
         'presence_penalty' => 0,
     ]);
