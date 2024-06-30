@@ -12,8 +12,9 @@
 
 <body>
     <aside class="sidebar">
-        <div class="sidebar-header">
-            <img class="logo" src="./images/logo.png" alt="logo">
+    <div class="sidebar-header">
+            <img src="images/Logo ReFarm.png" alt="logo" />
+            <h2>Re:Farm</h2>
         </div>
         <ul class="sidebar-links">
             <li><a href="dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
