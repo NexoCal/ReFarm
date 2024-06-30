@@ -1,3 +1,18 @@
+<?php 
+
+include 'databasekey.php';
+
+session_start();
+$userID = $_SESSION['LoggedUserID'];
+
+$sqlGrabData = "SELECT * FROM user WHERE id_user = '$userID'";
+
+$results = mysqli_query($conn, $sqlGrabData);
+$rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,7 +65,7 @@
           <span class="material-symbols-outlined"> notifications </span>
           <span class="material-symbols-outlined"> shopping_cart </span>
           <span class="material-symbols-outlined"> account_circle </span>
-          <span>Jacob</span>
+          <span><?php echo explode(" ",$rows['nama'])[0] . "..."?></span>
         </div>
       </div>
       <section class="intro-section">
@@ -157,7 +172,7 @@
           <div class="statistik-content">
             <span class="material-symbols-outlined"> account_circle </span>
             <div>
-              <h3>Hai, Jacob</h3>
+              <h3>Hai, <?php echo $rows['nama']?></h3>
               <div class="chart">Chart Placeholder</div>
             </div>
           </div>

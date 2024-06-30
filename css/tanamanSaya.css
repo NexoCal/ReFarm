@@ -356,8 +356,20 @@ body {
 .tabel-header, .tabel-row {
   display: flex;
   gap: 10px;
-  padding: 10px 0;
+  padding: 10px 0px 10px 0px;
   border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  
+}
+
+.tabel-row{
+  transition: 0.15s;
+}
+
+.tabel-row:hover{
+  cursor: pointer;
+  background-color: #d4d4d4;
+  transition: 0.15s;
 }
 
 .tabel-header {
@@ -381,4 +393,11 @@ body {
 .btn-add {
   background-color: #4caf50;
   color: white;
+  transition: 0.15s;
+}
+
+.btn-add:hover {
+  background-color: #479f4a;
+  color: white;
+  transition: 0.15s;
 }

@@ -1,16 +1,30 @@
+<?php
+
+include 'databasekey.php';
+
+session_start();
+$userID = $_SESSION['LoggedUserID'];
+
+$sqlGrabData = "SELECT * FROM user WHERE id_user = '$userID'";
+
+$results = mysqli_query($conn, $sqlGrabData);
+$rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Re:Farm</title>
   <link rel="icon" href="images/Logo ReFarm.png" type="image/png">
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="css/tanamanSaya.css" />
 </head>
+
 <body>
   <aside class="sidebar">
     <div class="sidebar-header">
@@ -50,7 +64,7 @@
         <span class="material-symbols-outlined">notifications</span>
         <span class="material-symbols-outlined">shopping_cart</span>
         <span class="material-symbols-outlined">account_circle</span>
-        <span>Jacob</span>
+        <span><?php echo explode(" ", $rows['nama'])[0] . "..." ?></span>
       </div>
     </div>
     <div class="intro-section">
@@ -88,7 +102,12 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+      <?php
+
+
+
+      ?>
       <div class="progress-chart">
         <h2>Progress Tanaman</h2>
         <div class="progress-tabel">
@@ -99,32 +118,49 @@
             <div class="tabel-col">Rata rata tinggi tanaman perhari</div>
             <div class="tabel-col">Status tanaman</div>
           </div>
-          <div class="tabel-row" onclick="window.location.href='tanaman.php'">
-            <div class="tabel-col">1</div>
-            <div class="tabel-col">Pohon Pisang</div>
-            <div class="tabel-col">2 Hari Lalu</div>
-            <div class="tabel-col">2 cm</div>
-            <div class="tabel-col">Sehat</div>
-          </div>
-          <div class="tabel-row" onclick="window.location.href='tanaman.php'">
-            <div class="tabel-col">2</div>
-            <div class="tabel-col">Padi</div>
-            <div class="tabel-col">1 Hari Lalu</div>
-            <div class="tabel-col">1.5 cm</div>
-            <div class="tabel-col">Sehat</div>
-          </div>
-          <div class="buttons">
-                <button class="btn-add" id="btn-add">Tambah</button>
+          <?php
+
+          $sqlGrabDataTanaman = "SELECT * FROM tanaman WHERE id_user = $userID";
+
+          $resultsTanaman = mysqli_query($conn, $sqlGrabDataTanaman);
+          $numbering = 1;
+
+          while ($rowsTanaman = mysqli_fetch_array($resultsTanaman, MYSQLI_ASSOC)){
+          ?>
+            <div class="tabel-row" onclick="window.location.href='tanaman.php?idtanaman=<?php echo $rowsTanaman['id_tanaman'] ?>'">
+              <div class="tabel-col"><?php echo $numbering ?></div>
+              <div class="tabel-col"><?php echo $rowsTanaman['nama_tanaman'] ?></div>
+              <div class="tabel-col"><?php
+
+                                      $planttime = new DateTime($rowsTanaman['tanggal_tanam']);
+                                      $todaytime = new DateTime(date("y-m-d"));
+
+                                      $dateDiffTime = date_diff($planttime, $todaytime);
+
+                                      echo $dateDiffTime->format('%d hari lalu')
+
+
+                                      ?></div>
+              <div class="tabel-col"><?php echo $rowsTanaman['tinggi_tanaman']." Cm" ?></div>
+              <div class="tabel-col">Sehat</div>
             </div>
+          <?php
+          $numbering++;
+          }
+          ?>
+          <div class="buttons">
+            <button class="btn-add" id="btn-add">Tambah</button>
+          </div>
         </div>
         <script>
-    document.getElementById('btn-add').addEventListener('click', function() {
-      window.location.href = 'tambahTanaman.php';
-    });
-  </script>
-      </div>
+          document.getElementById('btn-add').addEventListener('click', function() {
+            window.location.href = 'tambahTanaman.php';
+          });
+        </script>
       </div>
     </div>
   </div>
+  </div>
 </body>
+
 </html>
