@@ -243,6 +243,8 @@ body {
   display: flex;
   gap: 15px;
   overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Mengaktifkan carousel */
+  padding-bottom: 10px;
 }
 
 .card {
@@ -250,6 +252,9 @@ body {
   padding: 15px;
   border-radius: 8px;
   min-width: 200px;
+  flex: 0 0 calc(25% - 15px); /* 25% width minus gap for 4 cards per row */
+  box-sizing: border-box;
+  scroll-snap-align: start; /* Setiap card akan align dengan container saat scroll */
 }
 
 .card img {
@@ -292,4 +297,3 @@ body {
   color: #888;
   padding: 20px;
 }
-
