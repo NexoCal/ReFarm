@@ -73,10 +73,6 @@ include "databasekey.php";
                         <p>Prediksi Selesai: 21 September 2024</p>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div classsspider>tekkkk</div>
-
-                </div>
             </div>
 
             <div class="statistik-kamu">

@@ -112,71 +112,6 @@ body {
   border-radius: 4px;
 }
 
-.user-account {
-  margin-top: auto;
-  padding: 12px 10px;
-  margin-left: -10px;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  color: #161a2d;
-}
-
-.user-profile img {
-  width: 42px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-.user-profile h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.user-profile span {
-  font-size: 0.775rem;
-  font-weight: 600;
-}
-
-.user-detail {
-  margin-left: 23px;
-  white-space: nowrap;
-}
-
-.sidebar:hover .user-account {
-  background: #fff;
-  border-radius: 4px;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  color: #161a2d;
-}
-
-.user-profile img {
-  width: 42px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-.user-profile h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.user-profile span {
-  font-size: 0.775rem;
-  font-weight: 600;
-}
-
-.user-detail {
-  margin-left: 23px;
-  white-space: nowrap;
-}
-
 .main-content {
   margin-left: 80px; /* Sesuaikan margin saat sidebar tertutup */
   padding: 20px;
@@ -293,3 +228,13 @@ body {
   padding: 20px;
 }
 
+.piecharts-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.piechart {
+  width: calc(25% - 15px); /* Mengatur ukuran pie chart agar berjejer empat */
+  height: 300px;
+}

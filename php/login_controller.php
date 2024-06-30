@@ -13,10 +13,10 @@ if (isset($_POST['login'])) {
     if (mysqli_num_rows($ambil) === 1) {
         $data = mysqli_fetch_assoc($ambil);
 
-        if ($password_hash === hash('sha256',$data['password'])) {
+        if ($password_hash === $data['password']) {
             // Memeriksa domain email
             if (strpos($email, '@kementan.go.id') !== false) {
-                header("location: ../tanamanSaya.html");
+                header("location: ../dashboardAdmin.php");
             } else {
                 $_SESSION['LoggedUserID'] = $data['id_user']; 
                 header("location: ../dashboard.php");
