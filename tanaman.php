@@ -2,7 +2,12 @@
 
 include "databasekey.php";
 
+$idTanaman = $_GET['idtanaman'];
 
+$sqlGrabData = "SELECT * FROM tanaman WHERE id_tanaman = $idTanaman";
+
+$results = mysqli_query($conn, $sqlGrabData);
+$rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
 
 ?>
 
@@ -66,9 +71,9 @@ include "databasekey.php";
                 <div class="col-6">
                     <h2>Deskripsi Tanaman</h2>
                     <div class="plant-description">
-                        <p>Nama: Padi</p>
+                        <p>Nama: <?php echo $rows['nama_tanaman']?></p>
                         <p>Jenis: Pertanian</p>
-                        <p>Media Tanam: Tanah</p>
+                        <p>Media Tanam: <?php echo $rows['media_tanam']?></p>
                         <p>Mulai Tanam: 21 Juni 2024</p>
                         <p>Prediksi Selesai: 21 September 2024</p>
                     </div>
@@ -103,17 +108,14 @@ include "databasekey.php";
                     <tbody id="table-body">
                         <?php
 
-                        $sqlGrabData = 'SELECT * FROM tanaman WHERE id_tanaman = 21';
-
-                        $results = mysqli_query($conn, $sqlGrabData);
-                        $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
+                        
                         $progressData = json_decode($rows['progress']);
 
                         for ($i = 0; $i < count($progressData) - 1; $i++) {
                         ?>
                             <tr>
                                 <td><?php echo $progressData[$i]->tanggalTanam ?></td>
-                                <td><?php echo $progressData[$i]->tinggi ?></td>
+                                <td><?php echo $progressData[$i]->tinggi . " Cm" ?></td>
                                 <td><?php echo $progressData[$i]->kondisiDaun ?></td>
                                 <td><?php echo $progressData[$i]->kondisiBatang ?></td>
                                 <td><?php echo $progressData[$i]->kelembaban ?></td>
@@ -126,83 +128,91 @@ include "databasekey.php";
 
                         <?php
 
-                        $sqlGrabData = 'SELECT * FROM tanaman WHERE id_tanaman = 21';
+                        $sqlGrabData = "SELECT * FROM tanaman WHERE id_tanaman = $idTanaman";
 
                         $results = mysqli_query($conn, $sqlGrabData);
                         $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                         $progressData = json_decode($rows['progress']);
 
-                        $i = count($progressData) - 1 
+                        $i = count($progressData) - 1
                         ?>
-                            <tr>
-                                <td id="latest-tanggal"><?php echo $progressData[$i]->tanggalTanam ?></td>
-                                <td id="latest-tinggi"><?php echo $progressData[$i]->tinggi ?></td>
-                                <td id="latest-daun"><?php echo $progressData[$i]->kondisiDaun ?></td>
-                                <td id="latest-batang"><?php echo $progressData[$i]->kondisiBatang ?></td>
-                                <td id="latest-lembab"><?php echo $progressData[$i]->kelembaban ?></td>
-                                <td id="latest-freq"><?php echo $progressData[$i]->frekuensi ?></td>
-                                <td id="latest-keterangan"><?php echo $progressData[$i]->keterangan ?></td>
-                            </tr>
+                        <tr>
+                            <td id="latest-tanggal"><?php echo $progressData[$i]->tanggalTanam ?></td>
+                            <td id="latest-tinggi"><?php echo $progressData[$i]->tinggi . " Cm" ?></td>
+                            <td id="latest-daun"><?php echo $progressData[$i]->kondisiDaun ?></td>
+                            <td id="latest-batang"><?php echo $progressData[$i]->kondisiBatang ?></td>
+                            <td id="latest-lembab"><?php echo $progressData[$i]->kelembaban ?></td>
+                            <td id="latest-freq"><?php echo $progressData[$i]->frekuensi ?></td>
+                            <td id="latest-keterangan"><?php echo $progressData[$i]->keterangan ?></td>
+                        </tr>
                         <?php
-                        
+
                         ?>
-
-
                     </tbody>
                 </table>
-                <div class="form-container" id="form-container" style="display: none;">
-                    <label for="tanggal">Tanggal Awal Tanam</label>
-                    <input type="date" id="tanggal" />
-                    <label for="Tinggi">Tinggi Tanaman</label>
-                    <input type="text" id="tinggi-tanaman" placeholder="Tinggi Tanaman" />
-                    <label for="Kondisi">Kondisi Daun</label>
-                    <select id="kondisi-daun">
-                        <option value="" disabled selected>Pilih Kondisi Daun</option>
-                        <option value="Segar">Segar</option>
-                        <option value="Sedikit Layu">Sedikit Layu</option>
-                        <option value="Layu">Layu</option>
-                    </select>
-                    <label for="Kondisi">Kondisi Batang</label>
-                    <select id="kondisi-batang">
-                        <option value="" disabled selected>Pilih Kondisi Batang</option>
-                        <option value="Segar">Segar</option>
-                        <option value="Sedikit Layu">Sedikit Layu</option>
-                        <option value="Layu">Layu</option>
-                    </select>
-                    <label for="Kelembapan">Kelembapan Tanah</label>
-                    <select id="kelembapan-tanah">
-                        <option value="" disabled selected>Pilih Kelembapan Tanah</option>
-                        <option value="Basah">Basah</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Kering">Kering</option>
-                    </select>
-                    <label for="Frekuensi">Frekuensi Siram</label>
-                    <select id="frekuensi-siram">
-                        <option value="" disabled selected>Pilih Frekuensi</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3 dan lebih">3 dan lebih</option>
-                    </select>
-                    <label for="Tambah">Tambah Gambar</label>
-                    <input type="file" id="gambar-tanaman" accept="image/*" />
-                    <img id="gambar-preview" style="display:none;" width="100" height="100" />
-                    <label for="Pengamatan">Pengamatan Anda</label>
-                    <input type="text" id="pengamatan-anda" placeholder="Pengamatan Anda" />
-                </div>
                 <div class="gptresponse">
                     <textarea class="output-space" name="output" id="output" readonly style="display: none; "></textarea>
                 </div>
+                <div class="form-container" id="form-container" style="display: none;">
+                    <form action="addProgress.php" method="POST">
+                        <input required type="hidden" name="id_tanaman" value="<?php echo $rows['id_tanaman']; ?>">
+                        <input required type="hidden" name="nama_tanaman" value="<?php echo $rows['nama_tanaman']; ?>">
+                        <label for="Tinggi">Tinggi Tanaman</label>
+                        <input type="text" id="tinggi-tanaman" name="tinggi-tanaman" placeholder="Tinggi Tanaman" />
+                        <label for="Kondisi">Kondisi Daun</label>
+                        <select id="kondisi-daun" name="kondisi-daun">
+                            <option value="" disabled selected>Pilih Kondisi Daun</option>
+                            <option value="Segar">Segar</option>
+                            <option value="Sedikit Layu">Sedikit Layu</option>
+                            <option value="Layu">Layu</option>
+                        </select>
+                        <label for="Kondisi">Kondisi Batang</label>
+                        <select id="kondisi-batang" name="kondisi-batang">
+                            <option value="" disabled selected>Pilih Kondisi Batang</option>
+                            <option value="Segar">Segar</option>
+                            <option value="Sedikit Layu">Sedikit Layu</option>
+                            <option value="Layu">Layu</option>
+                        </select>
+                        <label for="Kelembapan">Kelembapan Tanah</label>
+                        <select id="kelembapan-tanah" name="kelembapan-tanah">
+                            <option value="" disabled selected>Pilih Kelembapan Tanah</option>
+                            <option value="Basah">Basah</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Kering">Kering</option>
+                        </select>
+                        <label for="Frekuensi">Frekuensi Siram</label>
+                        <select id="frekuensi-siram" name="frekuensi-siram">
+                            <option value="" disabled selected>Pilih Frekuensi</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3 dan lebih">3 dan lebih</option>
+                        </select>
+                        <label for="Tambah">Tambah Gambar</label>
+                        <input type="file" id="gambar-tanaman" accept="image/*" />
+                        <img id="gambar-preview" style="display:none;" width="100" height="100" />
+                        <label for="Pengamatan">Pengamatan Anda</label>
+                        <input type="text" id="pengamatan-anda" name="pengamatan-anda" placeholder="Pengamatan Anda" />
+
+                        <div class="buttons-form">
+                            <button class="btn-save" type="submit" id="btn-save" style="display: none;">Save</button>
+                        </div>
+                    </form>
+                    <div class="buttons-form">
+                    <button class="btn-cancel" id="btn-cancel" style="display: none;">Batal</button>
+                        </div>
+                </div>
+
+
                 <div class="buttons">
                     <button class="btn-add" id="btn-add">Tambah</button>
                     <button class="btn-analyze" id="btn-analyze" onclick="getresponse()">Analyze</button>
-                    <button class="btn-save" id="btn-save" style="display: none;">Save</button>
-                    <button class="btn-cancel" id="btn-cancel" style="display: none;">Batal</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="js/tanaman.js"></script>
     <script src="js/getresponse.js"></script>
+    <script src="js/addProgress.js"></script>
 </body>
 
 </html>
