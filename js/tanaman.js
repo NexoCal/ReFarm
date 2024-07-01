@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnCancel = document.getElementById("btn-cancel");
     const formContainer = document.getElementById("form-container");
     const btnanalyze = document.getElementById("btn-analyze");
+    const responsearea = document.getElementById("output")
 
     btnAdd.addEventListener("click", function () {
         formContainer.style.display = "block";
@@ -20,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
         btnSave.style.display = "none";
         btnCancel.style.display = "none";
     });
+
+    btnanalyze.addEventListener("click", function(){
+
+    })
 
     const gambarTanamanInput = document.getElementById("gambar-tanaman");
     const gambarPreview = document.getElementById("gambar-preview");

@@ -10,6 +10,15 @@ $sqlGrabData = "SELECT * FROM user WHERE id_user = '$userID'";
 $results = mysqli_query($conn, $sqlGrabData);
 $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
 
+$sqlGrabDataTanaman = "SELECT * FROM tanaman WHERE id_user = $userID";
+
+$resultsTanaman = mysqli_query($conn, $sqlGrabDataTanaman);
+$numbering = 1;
+
+$countTanaman = mysqli_query($conn, "SELECT COUNT('nama_tanaman') AS plant_counter FROM tanaman WHERE id_user = $userID");
+$rowCount = mysqli_fetch_array($countTanaman);
+$count = $rowCount['plant_counter'];
+
 
 ?>
 
@@ -86,7 +95,7 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
           <div class="statistik-cards">
             <div class="card">
               <p>Total Tanaman Yang Ditanam</p>
-              <h3>10</h3>
+              <h3><?php echo $count?></h3>
             </div>
             <div class="card">
               <p>Tanaman yang sedang ditanam</p>
@@ -119,12 +128,6 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
             <div class="tabel-col">Status tanaman</div>
           </div>
           <?php
-
-          $sqlGrabDataTanaman = "SELECT * FROM tanaman WHERE id_user = $userID";
-
-          $resultsTanaman = mysqli_query($conn, $sqlGrabDataTanaman);
-          $numbering = 1;
-
           while ($rowsTanaman = mysqli_fetch_array($resultsTanaman, MYSQLI_ASSOC)){
           ?>
             <div class="tabel-row" onclick="window.location.href='tanaman.php?idtanaman=<?php echo $rowsTanaman['id_tanaman'] ?>'">
