@@ -52,7 +52,7 @@
       </div>
     </div>
       <section class="form-section">
-        <form>
+        <form action="" method="post">
           <div class="form-group">
             <label for="nama-tanaman">Nama Tanaman</label>
             <input type="text" id="nama-tanaman" name="nama-tanaman">
