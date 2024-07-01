@@ -38,6 +38,10 @@
         <a href="diskusi.php">
           <span class="material-symbols-outlined"> communication </span>Diskusi</a>
       </li>
+      <li>
+        <a href="logout.php">
+          <span class="material-symbols-outlined"> logout </span>Logout</a>
+      </li>
     </ul>
   </aside>
   <main class="main-content">
