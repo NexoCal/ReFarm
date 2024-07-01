@@ -17,10 +17,10 @@
             <h2>Re:Farm</h2>
         </div>
         <ul class="sidebar-links">
-            <li><a href="dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
-            <li><a href="kelas.html" class="active"><span class="material-symbols-outlined">book</span>Kelas</a></li>
-            <li><a href="tanamanSaya.html"><span class="material-symbols-outlined">psychiatry</span>Tanaman Saya</a></li>
-            <li><a href="diskusi.html"><span class="material-symbols-outlined">communication</span>Diskusi</a></li>
+            <li><a href="dashboard.php"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+            <li><a href="kelas.php" class="active"><span class="material-symbols-outlined">book</span>Kelas</a></li>
+            <li><a href="tanamanSaya.php"><span class="material-symbols-outlined">psychiatry</span>Tanaman Saya</a></li>
+            <li><a href="diskusi.php"><span class="material-symbols-outlined">communication</span>Diskusi</a></li>
             <li><a href="javascript:history.back()"><span class="material-symbols-outlined">arrow_back</span>Kembali</a></li>
         </ul>
     </aside>
