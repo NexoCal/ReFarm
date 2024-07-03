@@ -1,5 +1,15 @@
 {
     "require": {
-        "orhanerday/open-ai": "^5.2"
+        "orhanerday/open-ai": "^5.2",
+        "openai-php/client": "^0.10.1",
+        "symfony/http-client": "^7.1",
+        "nyholm/psr7": "^1.8",
+        "guzzlehttp/guzzle": "^7.8",
+        "php-http/discovery": "^1.19"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }

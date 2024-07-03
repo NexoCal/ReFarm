@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnCancel = document.getElementById("btn-cancel");
     const formContainer = document.getElementById("form-container");
     const btnanalyze = document.getElementById("btn-analyze");
-    const responsearea = document.getElementById("output")
+    const responsearea = document.getElementById("output");
+    const btnscan = document.getElementById("btn-scan");
+    const btnload = document.getElementById("btn-load");
+    const imgup = document.getElementById("imageup");
 
     btnAdd.addEventListener("click", function () {
         formContainer.style.display = "block";
@@ -12,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
         btnanalyze.style.display = "none";
         btnSave.style.display = "block";
         btnCancel.style.display = "block";
+        btnscan.style.display = "none"
+        btnload.style.display = "none"
+        imgup.style.display = "none"
     });
 
     btnCancel.addEventListener("click", function () {
@@ -20,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
         btnanalyze.style.display = "block";
         btnSave.style.display = "none";
         btnCancel.style.display = "none";
+        btnscan.style.display = "block"
+        btnload.style.display = "block"
+        imgup.style.display = "block"
     });
 
     btnanalyze.addEventListener("click", function(){
