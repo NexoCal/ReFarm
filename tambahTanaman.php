@@ -57,10 +57,13 @@
             <label for="nama-tanaman">Nama Tanaman</label>
             <input type="text" id="nama-tanaman" name="nama-tanaman">
           </div>
-          <div class="form-group">
-            <label for="jenis-tanaman">Jenis Tanaman</label>
-            <input type="text" id="jenis-tanaman" name="jenis-tanaman">
-          </div>
+          <select id="kategori-tanaman" name="kategori-tanaman">
+            <label for="nama-tanaman">Kategori Tanaman</label>
+                            <option value="" disabled selected>Pilih Kategori Tanaman</option>
+                            <option value="Basah">Pangan</option>
+                            <option value="Normal">Sayur</option>
+                            <option value="Kering">Buah</option>
+                        </select>
           <div class="form-group">
             <label for="tanggal-tanam">Tanggal Awal Tanam</label>
             <input type="date" id="tanggal-tanam" name="tanggal-tanam">
