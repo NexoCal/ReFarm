@@ -62,7 +62,7 @@
                                 <span class="material-symbols-outlined">attach_money</span>Rp <?php echo $row['harga']; ?>
                             </div>
                             <div class="class-actions">
-                                <button class="btn-cart"><span class="material-symbols-outlined">add_shopping_cart</span>Masukkan Keranjang</button>
+                                <button class="btn-cart" onclick="window.location.href='payment.php'"><span class="material-symbols-outlined">sell</span>Beli Kelas</button>
                                 <button class="btn-favorite"><span class="material-symbols-outlined">favorite</span>Tambah Favorite</button>
                             </div>
                         </div>
