@@ -1,3 +1,4 @@
+/* Importing Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
@@ -9,9 +10,7 @@
 
 body {
   min-height: 100vh;
-  background: #f0f4ff;
-  display: flex;
-  transition: margin-left 0.4s ease;
+  background: #F0F4FF;
 }
 
 .sidebar {
@@ -21,10 +20,11 @@ body {
   height: 100%;
   width: 85px;
   display: flex;
+  overflow-x: hidden;
   flex-direction: column;
-  background: #4b6252;
+  background: #4B6252;
   padding: 25px 20px;
-  transition: width 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .sidebar:hover {
@@ -46,12 +46,6 @@ body {
   font-weight: 600;
   white-space: nowrap;
   margin-left: 23px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.sidebar:hover .sidebar-header h2 {
-  opacity: 1;
 }
 
 .sidebar-links h4 {
@@ -118,44 +112,6 @@ body {
   border-radius: 4px;
 }
 
-.user-account {
-  margin-top: auto;
-  padding: 12px 10px;
-  margin-left: -10px;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  color: #161a2d;
-}
-
-.user-profile img {
-  width: 42px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-.user-profile h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.user-profile span {
-  font-size: 0.775rem;
-  font-weight: 600;
-}
-
-.user-detail {
-  margin-left: 23px;
-  white-space: nowrap;
-}
-
-.sidebar:hover .user-account {
-  background: #fff;
-  border-radius: 4px;
-}
-
 .main-content {
   margin-left: 80px; /* Sesuaikan margin saat sidebar tertutup */
   padding: 20px;
@@ -168,70 +124,6 @@ body {
   width: calc(100% - 260px);
 }
 
-.sidebar:hover .user-account {
-  background: #fff;
-  border-radius: 4px;
-}
-
-.diskusi-header {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.diskusi-header input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.diskusi-content {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.diskusi-item {
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-.diskusi-item:last-child {
-  border-bottom: none;
-}
-
-.diskusi-item p {
-  margin: 5px 0;
-}
-
-.diskusi-meta {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  color: #999;
-}
-
-.tags {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.tags h3 {
-  margin-bottom: 10px;
-}
-
-.tags ul {
-  list-style: none;
-}
-
-.tags ul li {
-  margin-bottom: 5px;
-}
-
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -239,20 +131,110 @@ body {
   margin: 10px;
 }
 
-.diskusi-header button {
-  padding: 10px 20px;
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.intro-section {
+  background: #2d523d;
+  color: white;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-section .intro-text {
+  max-width: 60%;
+}
+
+.intro-section button {
+  background: white;
+  color: #2d523d;
   border: none;
-  border-radius: 4px;
-  background-color: #4b6252;
-  color: #fff;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
-.diskusi-header button:hover {
-  background-color: #6d8369;
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.input-container {
+.lanjutkan-melihat,
+.kelas-anda,
+.progres-tanaman,
+.statistik-kamu {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card-container {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card-info {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress {
+  background: #4caf50;
+  height: 100%;
+}
+
+.statistik-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.statistik-content .chart {
+  width: 150px;
+  height: 150px;
+  background: #e0e0e0;
+  border-radius: 50%;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  padding: 20px;
+}
+
+.piecharts-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.piechart {
+  width: calc(25% - 15px); /* Mengatur ukuran pie chart agar berjejer empat */
+  height: 300px;
 }
