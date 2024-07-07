@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2024 at 10:49 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Generation Time: Jul 07, 2024 at 06:09 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -375,7 +375,7 @@ CREATE TABLE `tanaman` (
 --
 
 INSERT INTO `tanaman` (`id_tanaman`, `id_kategori`, `id_user`, `nama_tanaman`, `tanggal_tanam`, `tanggal_panen`, `media_tanam`, `tinggi_tanaman`, `kondisi_daun`, `kondisi_batang`, `kelembapan_tanah`, `frekuensi_siram`, `keterangan_kondisi`, `progress`) VALUES
-(21, 101, 1, 'Tomat', '2024-01-01', '2024-04-01', 'Tanah', 50, 'Sehat', 'Segar', 'Basah', '2', 'Pertumbuhan sehat', '[{\"namaTanaman\":\"Tomat\",\"tanggalTanam\":\"2024-01-01\", \"tinggi\":\"10 cm\", \"kondisiDaun\":\"Sehat\", \"kondisiBatang\":\"Sehat\",\"kelembaban\":\"80%\",\"frekuensi\":\"Harian\",\"keterangan\":\"Normal\"}]'),
+(21, 101, 1, 'Tomat', '2024-01-01', '2024-04-01', 'Tanah', 50, 'Sehat', 'Segar', 'Basah', '2', 'Pertumbuhan sehat', '[{\"namaTanaman\":\"Tomat\",\"tanggalTanam\":\"2024-07-02\",\"tinggi\":\"12\",\"kondisiDaun\":\"Segar\",\"kondisiBatang\":\"Segar\",\"kelembaban\":\"Basah\",\"frekuensi\":\"1\",\"keterangan\":\"Normal saja\"}]'),
 (22, 102, 1, 'Mentimun', '2024-02-01', '2024-05-01', 'Hidroponik', 30, 'Sebagian Layu', 'Segar', 'Basah', '3', 'Butuh lebih banyak sinar matahari', NULL),
 (23, 103, 5, 'Selada', '2024-03-01', NULL, 'Tanah', 25, 'Layu', 'Layu', 'Kering', '1', 'Terlalu banyak air', NULL),
 (24, 102, 3, 'Bayam', '2024-01-15', '2024-03-15', 'Tanah', 40, 'Sehat', 'Segar', 'Basah', 'Lebih dari 3', 'Tumbuh dengan baik', NULL),
