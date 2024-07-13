@@ -7,6 +7,7 @@ function getresponse(){
     var lembab = document.getElementById('latest-lembab').innerText
     var frek = document.getElementById('latest-freq').innerText
     var keterangan = document.getElementById('latest-keterangan').innerText
+    var nama= document.getElementById('namatanam').value
     
 
     var response = document.getElementById('output')
@@ -36,7 +37,7 @@ function getresponse(){
         }
     }
 
-    request.open("GET", "gptresponse.php?tinggi=" + tinggi + "&daun=" + daun + "&batang=" + batang + "&lembab=" + lembab + "&freq=" + frek, true)
+    request.open("GET", "gptresponse.php?tinggi=" + tinggi + "&daun=" + daun + "&batang=" + batang + "&lembab=" + lembab + "&freq=" + frek + "&nama=" + nama, true)
     request.send();
 
 }

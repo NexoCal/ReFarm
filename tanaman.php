@@ -75,7 +75,7 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                 <div class="col-6">
                     <h2>Deskripsi Tanaman</h2>
                     <div class="plant-description">
-                        <p>Nama: <?php echo $rows['nama_tanaman']?></p>
+                        <p id="namatanam">Nama: <?php echo $rows['nama_tanaman']?></p>
                         <p>Jenis: Pertanian</p>
                         <p>Media Tanam: <?php echo $rows['media_tanam']?></p>
                         <p>Mulai Tanam: 21 Juni 2024</p>

@@ -18,8 +18,9 @@ if (isset($_GET['tinggi'])) {
     $batang = $_GET['batang'];
     $lembab = $_GET['lembab'];
     $freq = $_GET['freq'];
+    $nama = $_GET['nama'];
 
-    $message = "Plant Name: Tomat
+    $message = "Plant Name: $nama
 tinggi tanaman: $tinggi
 kondisi daun tanaman: $daun
 kondisi batang tanaman: $batang

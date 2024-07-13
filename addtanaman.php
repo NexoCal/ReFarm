@@ -22,4 +22,5 @@ $sqlinsertData = "INSERT INTO `tanaman` (`id_kategori`, `id_user`, `nama_tanaman
 VALUES ((SELECT id_kategori FROM kategori_tanaman WHERE nama_kategori = '$jenis'),
 $userID,'$nama','$tanggal','$media',$tinggiAwal,'$kondisiDaun','$kondisiBatang','$kelembapan')";
 mysqli_query($conn, $sqlinsertData);
+header("location:../refarm/tanamanSaya.php");
 ?>

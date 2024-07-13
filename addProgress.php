@@ -13,7 +13,7 @@ if (isset($_POST["id_tanaman"])) {
     $frek = $_POST["frekuensi-siram"];
     $pengamat = $_POST["pengamatan-anda"];
 
-    
+
 
     $newProgress = array(
         "namaTanaman" => $nama,
@@ -26,25 +26,49 @@ if (isset($_POST["id_tanaman"])) {
         "keterangan" => $pengamat
     );
 
-    
+
 
     $idTanaman = $_POST["id_tanaman"];
 
     $sqlGrabData = "SELECT progress FROM tanaman WHERE id_tanaman = $idTanaman";
     $results = mysqli_query($conn, $sqlGrabData);
     $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
-    $progressData = json_decode($rows['progress']);
 
-    array_push($progressData,$newProgress);
+    if ($rows['progress'] != null) {
 
-    $newDataProgress = json_encode($progressData);
+        $progressData = json_decode($rows['progress']);
 
-    $tgt = $_POST["id_tanaman"];
-    $sql = "UPDATE tanaman SET progress='$newDataProgress' WHERE id_tanaman = $idTanaman";
-    if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
-        header("location:../refarm/tanaman.php?idtanaman=$tgt");
+        array_push($progressData, $newProgress);
+
+        $newDataProgress = json_encode($progressData);
+
+        $tgt = $_POST["id_tanaman"];
+        $sql = "UPDATE tanaman SET progress='$newDataProgress' WHERE id_tanaman = $idTanaman";
+        if (mysqli_query($conn, $sql)) {
+            echo "New record created successfully";
+            header("location:../refarm/tanaman.php?idtanaman=$tgt");
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+
+
+
     } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+
+        $emptyArry = [];
+        array_push($emptyArry, $newProgress);
+        $newDataProgress = json_encode($emptyArry);
+
+        $tgt = $_POST["id_tanaman"];
+        $sql = "UPDATE tanaman SET progress='$newDataProgress' WHERE id_tanaman = $idTanaman";
+        if (mysqli_query($conn, $sql)) {
+            echo "New record created successfully";
+            header("location:../refarm/tanaman.php?idtanaman=$tgt");
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+
     }
-};
+
+}
+;

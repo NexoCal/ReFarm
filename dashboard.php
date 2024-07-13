@@ -124,22 +124,6 @@ include 'php/koneksi.php';
           </div>
         </div>
       </section>
-      <section>
-        <div class="progres-tanaman">
-          <h2>Progres Tanaman Saya</h2>
-          <div class="card-container">
-            <div class="card">
-              <img src="images/'.$row['image'].'" alt="'.$row['name'].'" />
-              <div class="card-info">
-                <h3>'.$row['name'].'</h3>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 70%;"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </section>
   </main>
 
