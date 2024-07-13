@@ -133,7 +133,7 @@ include 'php/koneksi.php';
               <div class="card-info">
                 <h3>'.$row['name'].'</h3>
                 <div class="progress-bar">
-                  <div class="progress" style="width: '.$row['progress'].'%;"></div>
+                  <div class="progress" style="width: 70%;"></div>
                 </div>
               </div>
             </div>

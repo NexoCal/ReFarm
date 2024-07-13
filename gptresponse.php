@@ -5,7 +5,9 @@ require __DIR__ . '/vendor/autoload.php'; // remove this line if you use a PHP F
 
 use Orhanerday\OpenAi\OpenAi;
 
-$open_ai = new OpenAi();
+
+// $open_ai = new OpenAi();
+
 
 // echo $open_ai->listModels(); // you should execute the request FIRST!
 // var_dump($open_ai->getCURLInfo()); // You can call the request
