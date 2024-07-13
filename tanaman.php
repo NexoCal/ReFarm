@@ -106,7 +106,7 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
 
                         
                         $progressData = json_decode($rows['progress']);
-
+                        if (!empty($progressData)){
                         for ($i = 0; $i < count($progressData) - 1; $i++) {
                         ?>
                             <tr>
@@ -142,7 +142,17 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                             <td id="latest-keterangan"><?php echo $progressData[$i]->keterangan ?></td>
                         </tr>
                         <?php
-
+                        } else {
+                            echo "<tr>
+                            <td>NO DATA</td>
+                            <td>NO DATA</td>
+                            <td>NO DATA</td>
+                            <td>NO DATA</td>
+                            <td>NO DATA</td>
+                            <td>NO DATA</td>
+                            <td>NO DATA</td>
+                            </tr>";
+                        }
                         ?>
                     </tbody>
                 </table>
