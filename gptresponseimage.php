@@ -1,8 +1,9 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php'; // remove this line if you use a PHP Framework.
+require __DIR__ . '/vendor/autoload.php';// remove this line if you use a PHP Framework.
+// require_once 'vendor/autoload.php'; 
 
-// $client = OpenAI::client();
+$client = OpenAI::client();
 
 // $imgData = $_GET['img64'];
 
