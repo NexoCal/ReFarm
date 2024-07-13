@@ -44,6 +44,10 @@ include 'php/koneksi.php';
         <a href="diskusi.php">
           <span class="material-symbols-outlined"> communication </span>Diskusi</a>
       </li>
+      <li>
+        <a href="logout.php">
+          <span class="material-symbols-outlined"> logout </span>Logout</a>
+      </li>
     </ul>
   </aside>
   <main class="main-content">
@@ -140,6 +144,19 @@ include 'php/koneksi.php';
   </main>
 
   <!-- Tambahan JavaScript untuk carousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cardContainers = document.querySelectorAll('.card-container');
+      cardContainers.forEach(cardContainer => {
+        const cards = cardContainer.querySelectorAll('.card');
+        if (cards.length > 4) {
+          cardContainer.style.overflowX = 'scroll'; // Mengaktifkan scrollbar untuk card-container
+        } else {
+          cardContainer.style.overflowX = 'hidden'; // Menyembunyikan scrollbar jika card kurang dari 4
+        }
+      });
+    });
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const cardContainers = document.querySelectorAll('.card-container');

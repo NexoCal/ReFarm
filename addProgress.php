@@ -39,11 +39,11 @@ if (isset($_POST["id_tanaman"])) {
 
     $newDataProgress = json_encode($progressData);
 
-
+    $tgt = $_POST["id_tanaman"];
     $sql = "UPDATE tanaman SET progress='$newDataProgress' WHERE id_tanaman = $idTanaman";
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
-        header('location:../refarm/tanaman.php');
+        header("location:../refarm/tanaman.php?idtanaman=$tgt");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

@@ -54,6 +54,10 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                     <span class="material-symbols-outlined">communication</span>Diskusi
                 </a>
             </li>
+            <li>
+                <a href="logout.php">
+                <span class="material-symbols-outlined"> logout </span>Logout</a>
+            </li>
         </ul>
     </aside>
     <div class="main-content">
@@ -99,6 +103,7 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                             <th>Kelembapan Tanah</th>
                             <th>Frekuensi Siram</th>
                             <th>Keterangan Kondisi</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody id="table-body">
@@ -117,6 +122,7 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                                 <td><?php echo $progressData[$i]->kelembaban ?></td>
                                 <td><?php echo $progressData[$i]->frekuensi ?></td>
                                 <td><?php echo $progressData[$i]->keterangan ?></td>
+                                <td><a href="delProgress.php?ind=<?php echo $i ?>&id_tanaman=<?php echo $idTanaman ?>"><button>Delete</button></a></td>
                             </tr>
                         <?php
                         }
@@ -140,6 +146,7 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                             <td id="latest-lembab"><?php echo $progressData[$i]->kelembaban ?></td>
                             <td id="latest-freq"><?php echo $progressData[$i]->frekuensi ?></td>
                             <td id="latest-keterangan"><?php echo $progressData[$i]->keterangan ?></td>
+                            <td><a href="delProgress.php?ind=<?php echo $i ?>&id_tanaman=<?php echo $idTanaman ?>"><button>Delete</button></a></td>
                         </tr>
                         <?php
                         } else {
@@ -193,8 +200,6 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                             <option value="2">2</option>
                             <option value="3 dan lebih">3 dan lebih</option>
                         </select>
-                        <label for="Tambah">Tambah Gambar</label>
-                        <input type="file" id="gambar-tanaman" accept="image/*" />
                         <img id="gambar-preview" style="display:none;" width="100" height="100" />
                         <label for="Pengamatan">Pengamatan Anda</label>
                         <input type="text" id="pengamatan-anda" name="pengamatan-anda" placeholder="Pengamatan Anda" />
@@ -212,6 +217,11 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
                 <div class="buttons">
                     <button class="btn-add" id="btn-add">Tambah</button>
                     <button class="btn-analyze" id="btn-analyze" onclick="getresponse()">Analyze</button>
+                    <div class="image-up">
+                        <input type="file" class="upimage" accept="image/*" id="imageup">
+                        <button class="btn-load" id="btn-load" onclick="loadIMG()">Load Image</button>
+                        <button class="btn-scan" id="btn-scan" onclick="getResponseIMG()">Scan</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,6 +229,7 @@ $rows = mysqli_fetch_array($results, MYSQLI_ASSOC);
     <script src="js/tanaman.js"></script>
     <script src="js/getresponse.js"></script>
     <script src="js/addProgress.js"></script>
+    <script src="js/getIMGresponse.js"></script>
 </body>
 
 </html>

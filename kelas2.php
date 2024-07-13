@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Re:Farm - Teknik Irigasi dan Pengelolaan Air</title>
+    <title>Re:Farm</title>
     <link rel="stylesheet" href="./css/kelas2.css">
     <link rel="icon" href="./images/Logo ReFarm.png" type="image/png">
     <script>
